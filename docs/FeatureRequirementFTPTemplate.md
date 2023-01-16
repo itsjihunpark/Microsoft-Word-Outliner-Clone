@@ -6,7 +6,7 @@ Functional Test Plan Template
 - **Collaborators (optional):**  
   - @ku13043, @ku17655  
 - **Repository:**
-[GWT2EventPlanningSolution](https://gitlab.kingston.ac.uk/CI5105-2021-22/GWT2EventPlanningSolution.git) 
+[Outliner in Personal Portfolio]() Add URL 
 
 # 1 Sub-Heading
 
@@ -27,7 +27,6 @@ Your requirements could go as sub-sub headings with a breakdown in a list
 * R2 - Requirement 2 Title
 * etc - and so on
 
-An example of a plan with requirements is shown in for the [Gateway Test2 2021-22 Solution: EventPlanner](https://gitlab.kingston.ac.uk/CI5101-2021-22/GatewayTest2SolutionEventPlanner.git) that regards the questions as requirements to be tested. 
 
 ## 2.1 Requirement 1
 
