@@ -12,8 +12,8 @@ This is the starting repository for your Outliner Coursework
 |  
 **docs** - directory for Project Documentation    
 &emsp; |      
-&emsp;**featurereqftptemplate.md** - markdown version of a feature requirements functional test plan template  
-&emsp;**umltemplate.md** - sample markdown version of a uml class diagram using mermaid      
+&emsp;**FeatureRequirmentFTPTemplate.md** - markdown version of a feature requirements functional test plan template  
+&emsp;**UMLTemplate.md** - sample markdown version of a uml class diagram using mermaid      
 
 ## Development Process
 
