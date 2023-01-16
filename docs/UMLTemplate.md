@@ -20,6 +20,8 @@ Example Class Diagram
 
 [This was done in the Mermaid Live Editor](https://mermaid.live/)  
 
+
+```mermaid
 classDiagram
     Animal <|-- Duck
     Animal <|-- Fish
@@ -41,3 +43,4 @@ classDiagram
       +bool is_wild
       +run()
     }
+```
