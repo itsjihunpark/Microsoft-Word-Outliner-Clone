@@ -11,9 +11,9 @@ This is the starting repository for your Outliner Coursework
 **OutlinerNB** - empty Maven NetBeans Project for your code  
 |  
 **docs** - directory for Project Documentation    
-    |    
-    **featurereqftptemplate.md** - markdown version of a feature requirements functional test plan template  
-    **umltemplate.md** - sample markdown version of a uml class diagram using mermaid      
+&emsp; |      
+&emsp;**featurereqftptemplate.md** - markdown version of a feature requirements functional test plan template  
+&emsp;**umltemplate.md** - sample markdown version of a uml class diagram using mermaid      
 
 ## Development Process
 
@@ -22,8 +22,8 @@ The development process is the same as for the Swing Workshops and your Gateway 
 To be able to clone the project and to push code back to it you will need the personal access token you should have set up as described [here](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#personal-access-tokens)
 
 To be able to Clone and Push this project back to your 'Personal Portfolio Sub-Group' you will need to authenticate:  
-Username: <your knumber>_KU   e.g K1234567_KU (it is important that you append **_KU** to your k-number) 
-Password: <Personal Access Token> e.g. glpat-GxxxxXXxxXXxxxXxXX4h  
+**Username**: [your knumber]_KU   e.g **K1234567_KU** (it is important that you append **_KU** to your k-number)   
+**Password**: [Personal Access Token] e.g. **glpat-GxxxxXXxxXXxxxXxXX4h**  
 Note: You might be able to authenticate with your Kingston Password however this is not guaranteed. If you change your KU password it will not be synchronised. **So use a Personal Access Token**  
 
 To start the development process:  
