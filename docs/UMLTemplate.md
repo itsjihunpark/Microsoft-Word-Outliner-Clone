@@ -1,5 +1,5 @@
 # Title
-UML Class Diagaram Template
+UML Class Diagram Template
 - **Start date**: 01-01-1970  
 - **Due date**: 01-01-1970  
 - **Main Author:** @ku63026  
