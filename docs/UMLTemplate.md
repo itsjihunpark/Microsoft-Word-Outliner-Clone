@@ -23,7 +23,7 @@ Example Class Diagram
 
 ```mermaid
 classDiagram
-    Animal <|-- Duck <|--SubSection
+    Animal <|-- Duck 
     Animal <|-- Fish
     Animal <|-- Zebra
     Animal : +int age
@@ -42,8 +42,5 @@ classDiagram
     class Zebra{
       +bool is_wild
       +run()
-    }
-    class SubSection{
-      +bool is_subsection
     }
 ```
