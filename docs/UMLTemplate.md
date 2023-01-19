@@ -27,6 +27,7 @@ classDiagram
     Animal <|-- Fish
     Animal <|-- Zebra
     Animal <|-- Human
+    Human <|-- George
     Animal : +int age
     Animal : +String gender
     Animal: +isMammal()
@@ -45,5 +46,9 @@ classDiagram
       +run()
     }
     class Human{
+    }
+    class George{
+      +bool scout
+    
     }
 ```
