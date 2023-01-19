@@ -51,4 +51,12 @@ classDiagram
       +bool scout
     
     }
+
+    class Section{
+      -SubSection SubSection
+    }
+
+    class Subsection{
+      SubSection sub
+    }
 ```
