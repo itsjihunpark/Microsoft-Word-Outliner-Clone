@@ -26,6 +26,7 @@ classDiagram
     Animal <|-- Duck 
     Animal <|-- Fish
     Animal <|-- Zebra
+    Animal <|-- Human
     Animal : +int age
     Animal : +String gender
     Animal: +isMammal()
@@ -43,5 +44,6 @@ classDiagram
       +bool is_wild
       +run()
     }
-
+    class Human{
+    }
 ```
