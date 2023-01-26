@@ -25,7 +25,7 @@ Example Class Diagram
 classDiagram
   
     class Outliner{
-      
+      -rootSection: List ~Section~
     }
     class Section{
       -subSection: List ~Section~
