@@ -23,6 +23,7 @@ Example Class Diagram
 
 ```mermaid
 classDiagram
+    Outliner "1" o-- "0..*" Section : belongs
     Section "1" o-- "0..*" Section : belongs 
     class Outliner{
       
