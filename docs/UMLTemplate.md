@@ -24,18 +24,11 @@ Example Class Diagram
 ```mermaid
 classDiagram
   
-    class Human{
+    class Outliner{
+      
     }
-    class George{
-      +bool scout
-    
-    }
-
     class Section{
-      -SubSection SubSection
+      -ArrayList<Section> subSection
     }
 
-    class Subsection{
-      SubSection sub
-    }
 ```
