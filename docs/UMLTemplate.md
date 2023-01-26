@@ -23,9 +23,9 @@ Example Class Diagram
 
 ```mermaid
 classDiagram
-  
+    Section "1" o-- "0..*" Section : belongs 
     class Outliner{
-      -rootSection: List ~Section~
+      
     }
     class Section{
       -subSection: List ~Section~
