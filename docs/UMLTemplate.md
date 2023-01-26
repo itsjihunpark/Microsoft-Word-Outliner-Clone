@@ -29,6 +29,8 @@ classDiagram
       -rootSections: List~Sections~
     }
     class Section{
+      -level: int
+      -text: String
       -subSections: List ~Section~
     }
 
