@@ -28,7 +28,7 @@ classDiagram
       
     }
     class Section{
-      -ArrayList<Section> subSection
+      -subSection: ArrayList<Section>
     }
 
 ```
