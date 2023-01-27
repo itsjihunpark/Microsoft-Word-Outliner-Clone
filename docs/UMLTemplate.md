@@ -23,8 +23,8 @@ Example Class Diagram
 
 ```mermaid
 classDiagram
-    Outliner "1" o-- "0..*" Section : belongs
-    Section "1" o-- "0..*" Section : belongs 
+    Outliner "1" o-- "0..*" Section : has a 
+    Section "1" o-- "0..*" Section : has a
     class Outliner{
       -rootSections: ArrayList~Sections~
       +getRootSections() ArrayList~Section~
