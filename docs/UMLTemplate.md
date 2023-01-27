@@ -27,7 +27,7 @@ classDiagram
     Section "1" o-- "0..*" Section : belongs 
     class Outliner{
       -rootSections: ArrayList~Sections~
-      +getRootSections() ArrayList ~Section~
+      +getRootSections(): ArrayList ~Section~
       +setRootSections(ArrayList ~Section~ rootSections) 
       +addRootSections(ArrayList ~Section~ rootSection)
       +addRootSections(int level, String text)
