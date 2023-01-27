@@ -26,7 +26,7 @@ classDiagram
     Outliner "1" o-- "0..*" Section : belongs
     Section "1" o-- "0..*" Section : belongs 
     class Outliner{
-      -$rootSections: List~Sections
+      -rootSections: List~Sections$
       +
     }
     class Section{
