@@ -32,6 +32,7 @@ classDiagram
       +addRootSections(ArrayList ~Section~ rootSection)
       +addRootSections(int level, String text)
       +readAll(ArrayList ~Section~ rootSections)
+      +getTasks() List~Task~
     }
     class Section{
       -level: int
