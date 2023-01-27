@@ -39,11 +39,15 @@ classDiagram
       -text: String
       -subSections: List ~Section~
       +getLevel() int
-      
-
+      +setLevel(int level)
+      +getText() String
+      +setText(String text)
+      +getSubSections() ArrayList~Section~
+      +setSubSection(ArrayList~Section~ subSection)
       +Section(int level, String text)
       +addSubsection(int level, String text)
       +addSubsection(Section subSection)
+      +toString() String
     }
 
 ```
