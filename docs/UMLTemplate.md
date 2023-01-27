@@ -28,10 +28,10 @@ classDiagram
     class Outliner{
       -rootSections: ArrayList~Sections~
       +getRootSections() ArrayList ~Section~
-      +setRootSections(ArrayList ~Section~) 
-      +addRootSections(ArrayList ~Section~)
-      +addRootSections(int, String)
-      +readAll(ArrayList ~Section~)
+      +setRootSections(ArrayList ~Section~ rootSections) 
+      +addRootSections(ArrayList ~Section~ rootSection)
+      +addRootSections(int level, String text)
+      +readAll(ArrayList ~Section~ rootSections)
     }
     class Section{
       -level: int
