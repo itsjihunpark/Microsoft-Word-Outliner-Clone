@@ -38,6 +38,12 @@ classDiagram
       -level: int
       -text: String
       -subSections: List ~Section~
+      +getLevel() int
+      
+
+      +Section(int level, String text)
+      +addSubsection(int level, String text)
+      +addSubsection(Section subSection)
     }
 
 ```
