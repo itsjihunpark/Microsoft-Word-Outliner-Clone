@@ -1,12 +1,10 @@
-# Title
+# Outliner App
 Functional Test Plan Template  
-- **Start date**: 01-01-1970  
-- **Due date**: 01-01-1970  
-- **Main Author:** @ku63026  
-- **Collaborators (optional):**  
-  - @ku13043, @ku17655  
+- **Start date**: 01/20/2023  
+- **Due date**: not sure yet 
+- **Main Author:** @k2115030   
 - **Repository:**
-[Outliner in Personal Portfolio]() Add URL 
+[Outliner in Personal Portfolio]
 
 # 1 Sub-Heading
 
@@ -20,12 +18,12 @@ ps Outside of tables a *new-line* can be inserted without a `<br>` tag - by putt
 
 
 # 2 Requirements
-
-Your requirements could go as sub-sub headings with a breakdown in a list
-
-* R1 - Requirement 1 Title
-* R2 - Requirement 2 Title
-* etc - and so on
+MUST HAVES:
+* R1-Structured data model capable of storing, retrieving data and UML diagram
+* R2-Use appropriate development best practices, including gitlab
+* R3-Add a subsection to an existing subsection
+* R4-Add a new section to the outline
+SHOULD HAVES:
 
 
 ## 2.1 Requirement 1
