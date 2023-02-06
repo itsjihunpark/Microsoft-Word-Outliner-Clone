@@ -25,7 +25,16 @@ Example Class Diagram
 classDiagram
     Outliner "1" o-- "0..*" Section : has a 
     Section "1" o-- "0..*" Section : has a
-    class Outliner{
+    class User{
+      -id: int
+      -fullName: String
+    }
+
+    Outliner{
+    
+    }
+
+    class RootSection{
       -rootSections: ArrayList~Sections~
       +getRootSections() ArrayList~Section~
       +setRootSections(ArrayList ~Section~ rootSections) 
