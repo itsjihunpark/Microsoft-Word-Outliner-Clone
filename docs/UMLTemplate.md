@@ -23,7 +23,7 @@ Example Class Diagram
 
 ```mermaid
 classDiagram
-    Outliner "1" o-- "0..*" Section : has a 
+    RootSection "1" o-- "0..*" Section : has a 
     Section "1" o-- "0..*" Section : has a
 
     class User{
