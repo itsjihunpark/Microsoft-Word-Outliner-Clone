@@ -25,12 +25,13 @@ Example Class Diagram
 classDiagram
     Outliner "1" o-- "0..*" Section : has a 
     Section "1" o-- "0..*" Section : has a
+
     class User{
       -id: int
       -fullName: String
     }
 
-    Outliner{
+    class Outliner{
     
     }
 
