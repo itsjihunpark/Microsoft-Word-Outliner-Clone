@@ -28,7 +28,7 @@ SHOULD HAVES:
 
 ## 2.1 Requirement 1
 
-| **R1** |   **Requirement 1 Title**    |
+| **R1** |   **Structured data Model-Storing/Retrieving data(UML)**    |
 | ------ | ------------------------------------ | 
 | **Description**      | Describes the requirement in more detail  | 
 | **Pre-condition**     | Requirements prior to entry   |      
