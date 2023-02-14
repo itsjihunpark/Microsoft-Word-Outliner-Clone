@@ -4,16 +4,17 @@
  */
 package control;
 
-import model.CSVDataAccess;
+import view.Outliner_view;
 
 /**
  *
  * @author jihun
  */
-public class Outliner {
-    public static void main(String arg[])
+public class Outliner 
+{
+    public static void main(String args[])
     {
-        CSVDataAccess.readUsersCSVFile();
-        System.out.println(CSVDataAccess.getUsers());
+        Outliner_view outlinerViewer = Outliner_view.getInstance();  
     }
+    
 }
