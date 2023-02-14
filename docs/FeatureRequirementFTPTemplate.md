@@ -42,7 +42,7 @@ Functional Requirements:<br>
 *<b>NF2(C))</b>-Documentation of features, including functional testing plan<br>
 *<b>NF3(C)</b>-Implement a graphical user interface, including design documentation<br>
 *<b>NF4(C)</b>-Use appropriate OO design approaches<br>
-*<b>NF1(M)</b>-Use appropriate development best practices, including GitLab<br>
+*<b>NF5(M)</b>-Use appropriate development best practices, including GitLab<br>
 ## 2.1 Requirement 1
 
 | **R1** |   **Structured data Model-Storing/Retrieving data(UML)**    |
