@@ -21,14 +21,8 @@ public class RootSection
     public RootSection()
     {
     }
-    
-    //getters and setters
 
-    RootSection(String text) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-    
-    
+    //getters and setters
     public ArrayList<Section> getRootSections() {
         return rootSections;
     }

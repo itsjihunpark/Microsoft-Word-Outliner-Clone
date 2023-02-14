@@ -16,8 +16,7 @@ public class Outline
     
     public static void addRootSection(String text)
     {
-        RootSection r = new RootSection(text);
-        rootSections.add(r);
+
     }
     
 }
