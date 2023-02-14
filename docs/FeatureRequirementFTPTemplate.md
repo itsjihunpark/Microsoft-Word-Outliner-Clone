@@ -21,22 +21,22 @@ ps Outside of tables a *new-line* can be inserted without a `<br>` tag - by putt
 Requirement overview:<br>
 Functional Requirements:<br>
 *<b>F1(M)</b>-Structured data model capable of storing, retrieving data and a UML diagram<br>
-*F2(S)-Add a new Section to the Outline<br>
-*F3(S)-Edit an existing Section<br>
-*F4(S)-Delete an existing Section from the Outline<br>
-*F5(S)-Mark a Section in the outline as completed<br>
-*F6(M)-Add a subSection to an existing Section <br>
-*F7(S)-Edit an existing subSection<br>
-*F8(S)-Delete an existing subSection<br>
-*F9(S)-Save an Outline to a file<br>
-*F10(S)-Load an Outline from a file<br>
-*F11(C)-Filter/Search Section<br>
-*F12(C)-Add a tag to a Section<br>
-*F13(C)-Edit tag(s) in a Section<br>
-*F14(C)-Sort section<br>
-*F15(C)-Order the child items of any item<br>
-*F16(C)-Retrieve items from a web service/url and populate the outline with them<br>
-*F17(C)-Simple formatting of text<br>
+*<b>F2(S)</b>-Add a new Section to the Outline<br>
+*<b>F3(S)</b> an existing Section<br>
+*<b>F4(S)</b>-Delete an existing Section from the Outline<br>
+*<b>F5(S)</b>-Mark a Section in the outline as completed<br>
+*<b>F6(M)</b>-Add a subSection to an existing Section <br>
+*<b>F7(S)</b>-Edit an existing subSection<br>
+*<b>F8(S)</b>-Delete an existing subSection<br>
+*<b>F9(S)</b>-Save an Outline to a file<br>
+*<b>F10(S)</b>-Load an Outline from a file<br>
+*<b>F11(C)</b>-Filter/Search Section<br>
+*<b>F12(C)</b>-Add a tag to a Section<br>
+*<b>F13(C)</b>-Edit tag(s) in a Section<br>
+*<b>F14(C)</b>-Sort section<br>
+*<b>F15(C)</b>-Order the child items of any item<br>
+*<b>F16(C)</b>-Retrieve items from a web service/url and populate the outline with them<br>
+*<b>F17(C)</b>-Simple formatting of text<br>
 
 ## 2.1 Requirement 1
 
