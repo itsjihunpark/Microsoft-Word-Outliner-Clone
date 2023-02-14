@@ -12,11 +12,25 @@ import java.util.ArrayList;
  */
 public class Outline 
 {
-    private static ArrayList<RootSection> rootSections;
+    private static ArrayList<Section> rootSections;
     
-    public static void addRootSection(String text)
+    public static void addRootSection(Section r)
     {
+        rootSections.add(r);
+    }
+    
 
+    //Recursive method that takes an arraylist of rootsections and goes through all section and subsection of each section.
+    public static void readAll(ArrayList<Section> parent)
+    {
+        for(Section child: parent)
+        {
+            ArrayList<Section> children = child.getSubSections();
+            
+            readAll(children);
+            System.out.println(child);
+            //add to a map.        
+        }
     }
     
 }
