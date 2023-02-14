@@ -18,14 +18,31 @@ ps Outside of tables a *new-line* can be inserted without a `<br>` tag - by putt
 
 
 # 2 Requirements
-MUST HAVES:
-* R1-Structured data model capable of storing, retrieving data and UML diagram
-* R2-Use appropriate development best practices, including gitlab
-* R3-Add a subsection to an existing subsection
-* R4-Add a new section to the outline
-SHOULD HAVES:
-
-
+<b>Requirements overview:</b><br>
+Functional Requirements:<br>
+*<b>F1(M)</b>-Structured data model capable of storing, retrieving data<br>
+*<b>F2(S)</b>-Add a new Section to the Outline<br>
+*<b>F3(S)</b> an existing Section<br>
+*<b>F4(S)</b>-Delete an existing Section from the Outline<br>
+*<b>F5(S)</b>-Mark a Section in the outline as completed<br>
+*<b>F6(M)</b>-Add a subSection to an existing Section <br>
+*<b>F7(S)</b>-Edit an existing subSection<br>
+*<b>F8(S)</b>-Delete an existing subSection<br>
+*<b>F9(S)</b>-Save an Outline to a file<br>
+*<b>F10(S)</b>-Load an Outline from a file<br>
+*<b>F11(C)</b>-Filter/Search Section<br>
+*<b>F12(C)</b>-Add a tag to a Section<br>
+*<b>F13(C)</b>-Edit tag(s) in a Section<br>
+*<b>F14(C)</b>-Sort section<br>
+*<b>F15(C)</b>-Order the child items of any item<br>
+*<b>F16(C)</b>-Retrieve items from a web service/url and populate the outline with them<br>
+*<b>F17(C)</b>-Simple formatting of text<br>
+<b>None functional Requirements</b>
+*<b>NF1(M)</b>-A UML diagram<br>
+*<b>NF2(C))</b>-Documentation of features, including functional testing plan<br>
+*<b>NF3(C)</b>-Implement a graphical user interface, including design documentation<br>
+*<b>NF4(C)</b>-Use appropriate OO design approaches<br>
+*<b>NF5(M)</b>-Use appropriate development best practices, including GitLab<br>
 ## 2.1 Requirement 1
 
 | **R1** |   **Structured data Model-Storing/Retrieving data(UML)**    |
