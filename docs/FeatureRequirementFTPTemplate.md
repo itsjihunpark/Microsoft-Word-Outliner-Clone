@@ -18,9 +18,9 @@ ps Outside of tables a *new-line* can be inserted without a `<br>` tag - by putt
 
 
 # 2 Requirements
-Requirement overview:<br>
+<b>Requirements overview:</b><br>
 Functional Requirements:<br>
-*<b>F1(M)</b>-Structured data model capable of storing, retrieving data and a UML diagram<br>
+*<b>F1(M)</b>-Structured data model capable of storing, retrieving data<br>
 *<b>F2(S)</b>-Add a new Section to the Outline<br>
 *<b>F3(S)</b> an existing Section<br>
 *<b>F4(S)</b>-Delete an existing Section from the Outline<br>
@@ -37,7 +37,12 @@ Functional Requirements:<br>
 *<b>F15(C)</b>-Order the child items of any item<br>
 *<b>F16(C)</b>-Retrieve items from a web service/url and populate the outline with them<br>
 *<b>F17(C)</b>-Simple formatting of text<br>
-
+<b>None functional Requirements</b>
+*<b>NF1(M)</b>-A UML diagram<br>
+*<b>NF2(C))</b>-Documentation of features, including functional testing plan<br>
+*<b>NF3(C)</b>-Implement a graphical user interface, including design documentation<br>
+*<b>NF4(C)</b>-Use appropriate OO design approaches<br>
+*<b>NF1(M)</b>-Use appropriate development best practices, including GitLab<br>
 ## 2.1 Requirement 1
 
 | **R1** |   **Structured data Model-Storing/Retrieving data(UML)**    |
