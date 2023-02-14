@@ -18,13 +18,25 @@ ps Outside of tables a *new-line* can be inserted without a `<br>` tag - by putt
 
 
 # 2 Requirements
-MUST HAVES:
-* R1-Structured data model capable of storing, retrieving data and UML diagram
-* R2-Use appropriate development best practices, including gitlab
-* R3-Add a subsection to an existing subsection
-* R4-Add a new section to the outline
-SHOULD HAVES:
-
+Requirement overview:
+Functional Requirements:
+*<b>F1(M)</b>-Structured data model capable of storing, retrieving data and a UML diagram
+*F2(S)-Add a new Section to the Outline
+*F3(S)-Edit an existing Section
+*F4(S)-Delete an existing Section from the Outline
+*F5(S)-Mark a Section in the outline as completed
+*F6(M)-Add a subSection to an existing Section 
+*F7(S)-Edit an existing subSection
+*F8(S)-Delete an existing subSection
+*F9(S)-Save an Outline to a file
+*F10(S)-Load an Outline from a file
+*F11(C)-Filter/Search Section
+*F12(C)-Add a tag to a Section
+*F13(C)-Edit tag(s) in a Section
+*F14(C)-Sort section
+*F15(C)-Order the child items of any item
+*F16(C)-Retrieve items from a web service/url and populate the outline with them
+*F17(C)-Simple formatting of text
 
 ## 2.1 Requirement 1
 
