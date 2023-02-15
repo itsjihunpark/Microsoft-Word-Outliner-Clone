@@ -6,6 +6,7 @@ package view;
 
 import java.awt.BorderLayout;
 import javax.swing.JFrame;
+import javax.swing.JTextArea;
 
 /**
  *
@@ -13,17 +14,48 @@ import javax.swing.JFrame;
  */
 public class Outliner_view extends JFrame
 {
+   
+    private JTextArea outlinerTextArea;
+    private String text;
+    
+    //singleton class
     private static final Outliner_view INSTANCE = new Outliner_view();
-    private Outliner_view()
-    {
-        this.setLayout(new BorderLayout());
-        this.setTitle("Outliner Coursework Application");
-        this.setSize(400,600);
-        this.setVisible(true);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
-    public static Outliner_view getInstance() //SINGLETON GETTER
+    public static Outliner_view getInstance()
     {
         return INSTANCE;
     }
+    
+    private Outliner_view()
+    {
+        
+        
+    }
+
+    public void startViewer()
+    {
+        //Config
+        this.setLayout(new BorderLayout());
+        this.setTitle("Outliner Coursework Application");
+        //Config End
+        
+        
+        outlinerTextArea = new JTextArea();
+        outlinerTextArea.setText(text);
+        this.add(outlinerTextArea);
+        
+        //Config
+        this.setSize(400,600);
+        this.setVisible(true);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //Config End
+        
+    }
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+    
 }
