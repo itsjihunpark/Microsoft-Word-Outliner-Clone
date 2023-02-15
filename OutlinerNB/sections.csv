@@ -1,7 +1,6 @@
-1,0,root 1
-2,0,root 2
-3,0,root 3
-4,1,sub of root 1
-5,2,sub of root 2
-6,5,sub of sub of root 2
-7,3,sub of root 3
+1,0,Get programming 2 coursework done
+2,0,Get DB coursework checked
+3,0,Get numPy done
+4,1,Create testing plan
+5,1,Create test classes
+6,1,Test with dummy Data

@@ -8,6 +8,7 @@ package uk.ac.kingston.ci5105.outliner;
  *
  * @author jihun
  */
-public class TestData {
+public class TestData 
+{
     
 }
