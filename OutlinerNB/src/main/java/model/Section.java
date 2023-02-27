@@ -4,6 +4,7 @@
  */
 package model;
 
+import control.Outliner;
 import java.util.ArrayList;
 
 /**
@@ -13,23 +14,69 @@ import java.util.ArrayList;
 public class Section 
 {
     //Class attributes
+    private User user;
     private Integer id;
     private Integer subSectionOf;
     private String text;
+    private Integer level;
     private ArrayList<Section> subSection = new ArrayList();
     
     //constructors
-    public Section(int id, int subSectionOf, String text)
+    //constructor when instatiating from csv
+    public Section(int id, int subSectionOf, String text, int level)
     {
         this.id = id;
         this.subSectionOf = subSectionOf;
-        this.text = text;
+        this.level = level;
+        String space = "";
+        for(int i = 0; i< level; i++)
+        { 
+            space = space + "      ";
+        }
+        //"      "
+        //"           "
+        this.text = space+text;
+        
     }
-    
+    //constructor when instatiating from add new section method
+    public Section()
+    {
+        
+    }
+    public Section(int subSectionOf, String text)
+    {
+        this.id = Outliner.getInstance().getSections().size()+1;;
+        this.subSectionOf = subSectionOf;
+        if(subSectionOf ==0)
+        {
+            this.level = 0;
+        }
+        else
+        {   
+            this.level = DataAccess.getSectionById(subSectionOf).getLevel()+1;
+        }
+        
+        String space = "";
+        for(int i = 0; i< this.level; i++)
+        { 
+            space = space + "      ";
+        }
+        //"      "
+        //"           "
+        this.text = space+text;
+    }
     public void addSubSection(Section s)
     {
         this.subSection.add(s);
     }    
+
+    @Override
+    public String toString() {
+        return this.text;
+    }
+    
+    
+    
     
     //All getters and Setters
     
@@ -58,13 +105,28 @@ public class Section
         this.text = text;
     }
     //Getter/Setter ArrayList<Section> subSection
-    public ArrayList<Section> getSubSection() {
+    public ArrayList<Section> getSubSections() {
         return subSection;
     }
 
     public void setSubSection(ArrayList<Section> subSection) {
         this.subSection = subSection;
     }
-    
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Integer getLevel() {
+        return level;
+    }
+
+    public void setLevel(Integer level) {
+        this.level = level;
+    }
     
 }

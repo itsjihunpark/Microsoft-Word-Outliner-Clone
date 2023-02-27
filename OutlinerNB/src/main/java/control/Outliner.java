@@ -5,8 +5,11 @@
 package control;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import model.DataAccess;
 import model.Section;
+import view.Outliner_view;
 
 /**
  *
@@ -14,44 +17,90 @@ import model.Section;
  */
 public class Outliner 
 {
+    private static ArrayList<Section> sections = DataAccess.getSectionInOrder();
+    private static String view;
+    public static final Comparator<Section> BY_ID = new ById();
+    private static final Outliner INSTANCE = new Outliner();
+    public static Outliner getInstance()
+    {
+        return INSTANCE;
+    }  
+    
+    
     public static void main(String arg[])
     {
         //data access
-        ArrayList<Section> sections = DataAccess.getSectionFromCSVFile();
         
-        
-        
+        //Reads all csv and spits out rootsection which is the point of access  
+        DataAccess.readSectionsFromCSVFile("sections.csv");
+        view = "";
+        for(Section s: sections)
+        {
+            view = view + s.getText()+"| id:"+s.getId()+System.lineSeparator();
+        }
+
+        //System.out.println(view);
+        //DataAccess.writeToCSVNewSection();
+   
         //Controls go under here
-        for(Section s: sections)
-        {
-            if(s.getSubSectionOf() != 0 )
-            {
-                sections.get(s.getSubSectionOf()-1).addSubSection(s);
-            }
-        }
         
-        ArrayList<Section> rootSections = new ArrayList();
         
-        for(Section s: sections)
-        {
-            if(s.getSubSectionOf() ==0)
-            {
-                rootSections.add(s);
-            }
-        }
-        
-        for(Section s: rootSections)
-        {
-            System.out.println(s.getText());
-            for(Section subSection: s.getSubSection())
-            {
-                System.out.println("    "+subSection.getText());
-            }
-        }
-       
-        
+        //builds the string view
         
         
         //Views generated here
+        Outliner_view ov = Outliner_view.getInstance();
+        //Outliner_view.setText(outline);
+        ov.startViewer();
+    }
+    
+
+    public  ArrayList<Section> getSections() {
+        return sections;
+    }
+
+    public void setSections(ArrayList<Section> sections) {
+        Outliner.sections = sections;
+    }
+
+    public static String getView() {
+        return view;
+    }
+
+    public static void setView(String view) {
+        Outliner.view = view;
+    }
+    
+
+
+    
+    /**
+     * manipulates array within this class 
+     */
+    
+    public static void addSection(Section newSection)
+    {
+        DataAccess.writeToCSVNewSection(newSection);
+        sections = DataAccess.getSectionInOrder();
+        Outliner.view = "";
+        for(Section s: sections)
+        {
+            view = view + s.getText()+"| id:"+s.getId()+System.lineSeparator();
+        }
+    }
+
+    public void saveChange()
+    {
+        //call data access function that will ammend array with new/deleted array
+    }
+
+    //TEMPLATE BELOW FOR MAKING COMPARATORS
+    private static class ById implements Comparator<Section> 
+    {
+        @Override
+        public int compare(Section s1, Section s2) {
+            return s1.getId().compareTo(s2.getId());
+        }   
     }
 }
+

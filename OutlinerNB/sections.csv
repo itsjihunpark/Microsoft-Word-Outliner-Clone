@@ -1,6 +1,18 @@
-1,0,Get programming 2 coursework done
-2,0,Get DB coursework checked
-3,0,Get numPy done
-4,1,Create testing plan
-5,1,Create test classes
-6,1,Test with dummy Data
+1,0,Get programming 2 coursework done,0
+2,0,Get DB coursework checked,0
+3,0,Get numPy done,0
+4,1,Create testing plan,1
+5,1,Create test classes,1
+6,5,Create test methods,2
+7,5,Create test method,2
+8,7,devise parameters for this method,3
+9,1,Test with dummy Data,1
+10,2,Add user class to the model and create log in page,1
+11,3,Complete cw for computing Systems,1
+12,0,delete section test,0
+13,12,delete section test sub,1
+14,13,delete section test sub,2
+15,14,delete section test sub,3
+16,15,delete section test sub,4
+17,16,delete section test sub,5
+18,17,delete section test sub,6
