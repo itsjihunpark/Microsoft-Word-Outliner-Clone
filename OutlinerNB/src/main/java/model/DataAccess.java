@@ -130,7 +130,8 @@ public class DataAccess
         }
         sectionInOrder = new ArrayList();
         readSectionsFromCSVFile("sections.csv");
-        
+        updateCSVToLatest();
+
     }
     
     //recursive method to go through all sections 
@@ -173,6 +174,32 @@ public class DataAccess
             }
         }
         return section;
+    }
+    //deletes all hanging sections
+    public static void updateCSVToLatest()
+    {
+        ArrayList<Section> updatedAndReOrdered = new ArrayList();
+        for(Section s:sectionInOrder)
+        {
+            updatedAndReOrdered.add(s);
+        }
+        Collections.sort(updatedAndReOrdered, BY_ID);
+        String csv = "";
+        for(Section s: updatedAndReOrdered)
+        {
+            String text = s.getText();
+            text = text.replaceAll("  ", "");
+            csv = csv + s.getId() +","+s.getSubSectionOf()+","+text+","+s.getLevel()+System.lineSeparator();
+        }
+        try{
+            BufferedWriter bw = new BufferedWriter(new FileWriter("sections.csv"));
+            bw.write(csv);
+            bw.close();
+        }
+        catch(IOException ioe)
+        {
+            
+        }
     }
 
     public static void setSectionInOrder(ArrayList<Section> sectionInOrder) {

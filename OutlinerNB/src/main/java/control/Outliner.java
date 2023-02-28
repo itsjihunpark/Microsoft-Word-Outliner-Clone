@@ -32,7 +32,6 @@ public class Outliner
         
         //Reads all csv and spits out rootsection which is the point of access  
         DataAccess.readSectionsFromCSVFile("sections.csv");
-
         //Controls go under here
         
         

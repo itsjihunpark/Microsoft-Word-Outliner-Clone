@@ -44,7 +44,7 @@ public class TextController implements ActionListener{
                 {
                     subSectionOf ="0";
                 }
-                
+                DataAccess.readSectionsFromCSVFile("sections.csv"); // could blow up in my face..
                 Outliner.addSection(new Section(Integer.parseInt(subSectionOf),sectionText));
                 Outliner_view.getInstance().getText().setText(Outliner.getInstance().getView());
                 break;
