@@ -56,7 +56,7 @@ public class Section
         }
         else
         {   
-            this.level = DataAccess.getSectionById(subSectionOf).getLevel()+1;
+            this.level = DataAccess.getSectionByIdFromOrderedList(subSectionOf).getLevel()+1;
         }
         
         String space = "";

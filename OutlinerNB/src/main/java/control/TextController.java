@@ -49,7 +49,8 @@ public class TextController implements ActionListener{
                 Outliner_view.getInstance().getText().setText(Outliner.getInstance().getView());
                 break;
             case "deleteSubmit":
-                Outliner.deleteSection(15);
+                Outliner.deleteSection(Integer.parseInt(Outliner_view.getInstance().getDeleteIdSection().getText()));
+                Outliner_view.getInstance().getText().setText(Outliner.getInstance().getView());
                 break;
         }
         

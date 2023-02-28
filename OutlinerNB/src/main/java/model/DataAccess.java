@@ -51,9 +51,7 @@ public class DataAccess
         {
             if(s.getSubSectionOf() != 0 )
             {
-                //gives indent to which ever one that's not root
-                //s.setText("     "+s.getText());
-                sections.get(s.getSubSectionOf()-1).addSubSection(s);
+                getSectionByIdFromUnOrderedList(s.getSubSectionOf()).addSubSection(s);
             }
         }
         
@@ -104,7 +102,7 @@ public class DataAccess
     
     public static void deleteSectionAndUpdateCSV(int id)
     {
-        sectionInOrder.remove(getSectionById(id));
+        sectionInOrder.remove(getSectionByIdFromOrderedList(id));
         ArrayList<Section> orderedById = new ArrayList();
         for(Section s: sectionInOrder)
         {
@@ -152,10 +150,22 @@ public class DataAccess
     public static ArrayList<Section> getSectionInOrder() {
         return sectionInOrder;
     }
-    public static Section getSectionById(int id)
+    public static Section getSectionByIdFromOrderedList(int id)
     {
         Section section = new Section();
         for(Section s: sectionInOrder)
+        {
+            if(s.getId() == id)
+            {
+                section = s;
+            }
+        }
+        return section;
+    }
+    public static Section getSectionByIdFromUnOrderedList(int id)
+    {
+        Section section = new Section();
+        for(Section s: sections)
         {
             if(s.getId() == id)
             {

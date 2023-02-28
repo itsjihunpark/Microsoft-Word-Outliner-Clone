@@ -240,6 +240,42 @@ public class Outliner_view extends JFrame
         this.inputArea = inputArea;
     }
 
+    public JLabel getDeleteSectionLabel() {
+        return deleteSectionLabel;
+    }
+
+    public void setDeleteSectionLabel(JLabel deleteSectionLabel) {
+        this.deleteSectionLabel = deleteSectionLabel;
+    }
+
+    public JTextArea getDeleteIdSection() {
+        return deleteIdSection;
+    }
+
+    public void setDeleteIdSection(JTextArea deleteIdSection) {
+        this.deleteIdSection = deleteIdSection;
+    }
+
+    public JButton getDeleteBtn() {
+        return deleteBtn;
+    }
+
+    public void setDeleteBtn(JButton deleteBtn) {
+        this.deleteBtn = deleteBtn;
+    }
+
+    public JPanel getDeletePanel() {
+        return deletePanel;
+    }
+
+    public void setDeletePanel(JPanel deletePanel) {
+        this.deletePanel = deletePanel;
+    }
+
+    public void setMenuBar(JMenuBar menuBar) {
+        this.menuBar = menuBar;
+    }
+
     
     
 }
