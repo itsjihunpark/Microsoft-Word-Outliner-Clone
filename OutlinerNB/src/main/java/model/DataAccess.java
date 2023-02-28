@@ -20,10 +20,11 @@ import java.util.Collections;
 public class DataAccess 
 {
     private static ArrayList<Section> sectionInOrder = new ArrayList();
+    private static ArrayList<Section> sections = new ArrayList();
     
     public static void readSectionsFromCSVFile(String fileName)
     {
-        ArrayList<Section> sections = new ArrayList();
+        sections = new ArrayList();
         String data="";    
         try
         {
@@ -33,6 +34,7 @@ public class DataAccess
                 String[] s = data.split(",");
                 Section section = new Section(Integer.parseInt(s[0]), Integer.parseInt(s[1]), s[2], Integer.parseInt(s[3]));
                 sections.add(section);
+                //System.out.println(section.getId());
             }
             br.close();
         }
@@ -67,6 +69,7 @@ public class DataAccess
             DataAccess.sectionInOrder.add(s);
             readSection(s);
         }
+        //All arrayList will be empty if no items in csv file
     }
     //write to csv new sections
     public static void writeToCSVNewSection(Section newSection)
@@ -81,7 +84,7 @@ public class DataAccess
             }     
             String text = newSection.getText();
             text = text.replaceAll("  ", "");
-            sectionsCsv = sectionsCsv+newSection.getId()+","+newSection.getSubSectionOf()+","+ text +","+newSection.getLevel();  
+            sectionsCsv = sectionsCsv+newSection.getId()+","+newSection.getSubSectionOf()+","+ text +","+newSection.getLevel()+System.lineSeparator();  
             
             BufferedWriter bw = new BufferedWriter(new FileWriter("sections.csv"));
             bw.write(sectionsCsv);
@@ -96,9 +99,9 @@ public class DataAccess
     }
        
     
-    public static void deleteSectionOnCSV()
+    public static void writeUpdatedCSV(int id)
     {
-        
+        sectionInOrder.remove(getSectionById(id));     
     }
     
     //recursive method to go through all sections 
@@ -134,5 +137,15 @@ public class DataAccess
     public static void setSectionInOrder(ArrayList<Section> sectionInOrder) {
         DataAccess.sectionInOrder = sectionInOrder;
     }
+
+    public static ArrayList<Section> getSections() {
+        return sections;
+    }
+
+    public static void setSections(ArrayList<Section> sections) {
+        DataAccess.sections = sections;
+    }
+    
+    
     
 }

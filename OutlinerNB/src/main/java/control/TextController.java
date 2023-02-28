@@ -24,9 +24,6 @@ public class TextController implements ActionListener{
             case "loadFile":
                 Outliner_view.getInstance().getText().setText(Outliner.getInstance().getView());
                 break;
-            case "add":
-                Outliner.addSection(new Section(30,"new test section"));
-                break;
             // replace text generated from data access to one generated from outliner app
             case "textSelected":
                 System.out.println(Outliner_view.getInstance().getText().getSelectedText());

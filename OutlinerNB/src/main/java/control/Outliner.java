@@ -33,20 +33,17 @@ public class Outliner
         
         //Reads all csv and spits out rootsection which is the point of access  
         DataAccess.readSectionsFromCSVFile("sections.csv");
+
+        //Controls go under here
+        
+        
+        //builds the string view
         view = "";
         for(Section s: sections)
         {
             view = view + s.getText()+"| id:"+s.getId()+System.lineSeparator();
         }
-
         //System.out.println(view);
-        //DataAccess.writeToCSVNewSection();
-   
-        //Controls go under here
-        
-        
-        //builds the string view
-        
         
         //Views generated here
         Outliner_view ov = Outliner_view.getInstance();
@@ -87,6 +84,11 @@ public class Outliner
         {
             view = view + s.getText()+"| id:"+s.getId()+System.lineSeparator();
         }
+    }
+    public static void deleteSection(int id)
+    {
+
+        
     }
 
     public void saveChange()
