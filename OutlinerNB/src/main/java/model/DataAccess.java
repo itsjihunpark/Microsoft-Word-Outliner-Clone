@@ -4,6 +4,7 @@
  */
 package model;
 
+import control.Outliner;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
@@ -11,6 +12,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 
 /**
@@ -21,6 +23,7 @@ public class DataAccess
 {
     private static ArrayList<Section> sectionInOrder = new ArrayList();
     private static ArrayList<Section> sections = new ArrayList();
+    public static final Comparator<Section> BY_ID = new DataAccess.ById();
     
     public static void readSectionsFromCSVFile(String fileName)
     {
@@ -99,9 +102,37 @@ public class DataAccess
     }
        
     
-    public static void writeUpdatedCSV(int id)
+    public static void deleteSectionAndUpdateCSV(int id)
     {
-        sectionInOrder.remove(getSectionById(id));     
+        sectionInOrder.remove(getSectionById(id));
+        ArrayList<Section> orderedById = new ArrayList();
+        for(Section s: sectionInOrder)
+        {
+            orderedById.add(s);
+        }
+        Collections.sort(orderedById, BY_ID);
+        String csv = "";
+        for(Section s: orderedById)
+        {
+            String text = s.getText();
+            text = text.replaceAll("  ", "");
+            csv = csv + s.getId() +","+s.getSubSectionOf()+","+text+","+s.getLevel()+System.lineSeparator();
+        }
+        
+        System.out.println(csv);
+        
+        try{
+            BufferedWriter bw = new BufferedWriter(new FileWriter("sections.csv"));
+            bw.write(csv);
+            bw.close();
+        }
+        catch(IOException ioe)
+        {
+            
+        }
+        sectionInOrder = new ArrayList();
+        readSectionsFromCSVFile("sections.csv");
+        
     }
     
     //recursive method to go through all sections 
@@ -146,6 +177,13 @@ public class DataAccess
         DataAccess.sections = sections;
     }
     
+    private static class ById implements Comparator<Section> 
+    {
+        @Override
+        public int compare(Section s1, Section s2) {
+            return s1.getId().compareTo(s2.getId());
+        }   
+    }
     
     
 }

@@ -12,5 +12,8 @@
 12,0,delete section test,0
 13,12,delete section test sub,1
 14,13,delete section test sub,2
-15,14,delete section test sub,3
 16,15,delete section test sub,4
+17,16,delete section test sub,5
+18,17,delete section test sub,6
+19,0,new root section,0
+20,0,new root section,0

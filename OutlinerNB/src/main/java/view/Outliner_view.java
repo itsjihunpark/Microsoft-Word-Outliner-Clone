@@ -40,8 +40,10 @@ public class Outliner_view extends JFrame
     private JTextArea editTextArea;
     private JTextArea editSubSectionOf;
     private JPanel inputArea;
-    
-    
+    private JLabel deleteSectionLabel;
+    private JTextArea deleteIdSection;
+    private JButton deleteBtn; 
+    private JPanel deletePanel;
     private JMenuBar menuBar;
     
     //singleton class
@@ -78,13 +80,13 @@ public class Outliner_view extends JFrame
         scrollPane = new JScrollPane(text);
         
         inputArea = new JPanel();
-        inputArea.setLayout(new GridLayout(6,1));
+        inputArea.setLayout(new GridLayout(8,1));
         
         printSelectedButton = new JButton("Print Selected");
         printSelectedButton.setActionCommand("textSelected");
         printSelectedButton.addActionListener(new TextController());
         
-        //text input area
+        //new section text input area
         editTextAreaLabel = new JLabel("Enter new section data here:");
         editTextArea = new JTextArea();
         editSubSectionOfAreaLabel = new JLabel("Sub-section of which section? type 0 if root section");
@@ -94,16 +96,26 @@ public class Outliner_view extends JFrame
         submitBtn.setActionCommand("addNewSection");
         submitBtn.addActionListener(new TextController());
         
+        //delete section input area
+        deleteSectionLabel= new JLabel("Enter the id of the section you'd like to delete below");
+        deletePanel = new JPanel(new GridLayout(1,2));
+        deleteIdSection = new JTextArea();
+        deleteBtn = new JButton("delete this section");
+        deleteBtn.setActionCommand("deleteSubmit");
+        deleteBtn.addActionListener(new TextController());
+        deletePanel.add(deleteIdSection);
+        deletePanel.add(deleteBtn);
         
-        
-        
-        
+        //adding new section elements
         inputArea.add(editTextAreaLabel);
         inputArea.add(editTextArea);
         inputArea.add(editSubSectionOfAreaLabel);
         inputArea.add(editSubSectionOf);
         inputArea.add(submitBtn);
         inputArea.add(printSelectedButton);
+        //
+        inputArea.add(deleteSectionLabel);
+        inputArea.add(deletePanel);
         //adding Components to frame
       
         this.add(menuBar, BorderLayout.NORTH);

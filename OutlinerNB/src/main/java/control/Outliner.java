@@ -19,7 +19,6 @@ public class Outliner
 {
     private static ArrayList<Section> sections = DataAccess.getSectionInOrder();
     private static String view;
-    public static final Comparator<Section> BY_ID = new ById();
     private static final Outliner INSTANCE = new Outliner();
     public static Outliner getInstance()
     {
@@ -38,11 +37,8 @@ public class Outliner
         
         
         //builds the string view
-        view = "";
-        for(Section s: sections)
-        {
-            view = view + s.getText()+"| id:"+s.getId()+System.lineSeparator();
-        }
+        createView();
+        
         //System.out.println(view);
         
         //Views generated here
@@ -67,7 +63,6 @@ public class Outliner
     public static void setView(String view) {
         Outliner.view = view;
     }
-    
 
 
     
@@ -79,30 +74,22 @@ public class Outliner
     {
         DataAccess.writeToCSVNewSection(newSection);
         sections = DataAccess.getSectionInOrder();
+        createView();
+    }
+    public static void deleteSection(int id)
+    {
+        DataAccess.deleteSectionAndUpdateCSV(id);
+        sections = DataAccess.getSectionInOrder();
+        createView();
+    }
+
+    public static void createView()
+    {
         Outliner.view = "";
         for(Section s: sections)
         {
             view = view + s.getText()+"| id:"+s.getId()+System.lineSeparator();
         }
-    }
-    public static void deleteSection(int id)
-    {
-
-        
-    }
-
-    public void saveChange()
-    {
-        //call data access function that will ammend array with new/deleted array
-    }
-
-    //TEMPLATE BELOW FOR MAKING COMPARATORS
-    private static class ById implements Comparator<Section> 
-    {
-        @Override
-        public int compare(Section s1, Section s2) {
-            return s1.getId().compareTo(s2.getId());
-        }   
     }
 }
 
