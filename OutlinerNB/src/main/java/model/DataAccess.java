@@ -117,7 +117,6 @@ public class DataAccess
             csv = csv + s.getId() +","+s.getSubSectionOf()+","+text+","+s.getLevel()+System.lineSeparator();
         }
         
-        System.out.println(csv);
         
         try{
             BufferedWriter bw = new BufferedWriter(new FileWriter("sections.csv"));

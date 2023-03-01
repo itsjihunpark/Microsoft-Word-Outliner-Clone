@@ -34,7 +34,6 @@ public class Outliner
         DataAccess.readSectionsFromCSVFile("sections.csv");
         //Controls go under here
         
-        
         //builds the string view
         createView();
         
