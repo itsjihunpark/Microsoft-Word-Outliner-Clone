@@ -84,7 +84,7 @@ public class DataAccess
                 sectionsCsv = sectionsCsv+data+System.lineSeparator();
             }     
             String text = newSection.getText();
-            text = text.replaceAll("  ", "");
+            text = text.replaceAll("\t", "");
             sectionsCsv = sectionsCsv+newSection.getId()+","+newSection.getSubSectionOf()+","+ text +","+newSection.getLevel()+System.lineSeparator();  
             
             BufferedWriter bw = new BufferedWriter(new FileWriter("sections.csv"));
@@ -113,7 +113,7 @@ public class DataAccess
         for(Section s: orderedById)
         {
             String text = s.getText();
-            text = text.replaceAll("  ", "");
+            text = text.replaceAll("\t", "");
             csv = csv + s.getId() +","+s.getSubSectionOf()+","+text+","+s.getLevel()+System.lineSeparator();
         }
         
@@ -187,7 +187,7 @@ public class DataAccess
         for(Section s: updatedAndReOrdered)
         {
             String text = s.getText();
-            text = text.replaceAll("  ", "");
+            text = text.replaceAll("\t", "");
             csv = csv + s.getId() +","+s.getSubSectionOf()+","+text+","+s.getLevel()+System.lineSeparator();
         }
         try{

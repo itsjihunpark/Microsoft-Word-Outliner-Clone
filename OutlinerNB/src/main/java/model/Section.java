@@ -31,7 +31,7 @@ public class Section
         String space = "";
         for(int i = 0; i< level; i++)
         { 
-            space = space + "      ";
+            space = space + "\t";
         }
         //"      "
         //"           "
@@ -62,7 +62,7 @@ public class Section
         String space = "";
         for(int i = 0; i< this.level; i++)
         { 
-            space = space + "      ";
+            space = space + "\t";
         }
         //"      "
         //"           "
