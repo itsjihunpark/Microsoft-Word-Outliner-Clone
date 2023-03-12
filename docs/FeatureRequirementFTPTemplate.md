@@ -45,9 +45,9 @@ Functional Requirements:<br>
 *<b>NFR5(M)</b>-Use appropriate development best practices, including GitLab<br>
 ## 2.1 Requirement(functional) 1
 
-| **FR1** |   **not decided yet**    |
+| **FR1** |   **Structured data model capable of storing, retrieving data**    |
 | ------ | ------------------------------------ | 
-| **Description**      | Describes the requirement in more detail  | 
+| **Description**      | Data Model consisting of Outliner, Section and user  | 
 | **Pre-condition**     | Requirements prior to entry   |      
 | **Post-condition**      | Promise to deliver upon exit   | 
 | **Design notes**     | Any notes on use <br> Notes in cells can be put on separate lines using `<br>` or more rows eg... |
