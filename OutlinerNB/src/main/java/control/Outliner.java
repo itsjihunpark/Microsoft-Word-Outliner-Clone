@@ -9,6 +9,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import model.DataAccess;
 import model.Section;
+import view.OutlinerView;
 import view.Outliner_view;
 
 /**
@@ -32,20 +33,17 @@ public class Outliner
         
         //Reads all csv and spits out rootsection which is the point of access  
         DataAccess.readSectionsFromCSVFile("sections.csv");
-        //Controls go under here
-        
         //builds the string view
         createView();
         
         //System.out.println(view);
         
         //Views generated here
-        Outliner_view ov = Outliner_view.getInstance();
-        //Outliner_view.setText(outline);
-        ov.startViewer();
+        OutlinerView.getInstance();
+        
     }
     
-
+    
     public  ArrayList<Section> getSections() {
         return sections;
     }
@@ -81,6 +79,13 @@ public class Outliner
         createView();
     }
 
+    public static void editSection(int id, String newText)
+    {
+        DataAccess.editSection(id, newText);
+        sections = DataAccess.getSectionInOrder();
+        createView();
+    }
+    
     public static void createView()
     {
         Outliner.view = "";

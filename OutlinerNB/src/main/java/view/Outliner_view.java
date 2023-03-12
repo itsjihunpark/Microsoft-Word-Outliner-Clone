@@ -19,6 +19,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.JTabbedPane;
 import javax.swing.JTextArea;
 
 /**
@@ -27,14 +28,11 @@ import javax.swing.JTextArea;
  */
 public class Outliner_view extends JFrame
 {
-     
+
     private JTextArea text = new JTextArea();
     private JScrollPane scrollPane;
     private JButton printSelectedButton;
     private JMenuItem menuLoadBtn;
-    private JMenuItem menuAddBtn;
-    private JMenuItem menuOpen;
-    private JFileChooser fileSelector;
     private JButton submitBtn;
     private JLabel editTextAreaLabel;
     private JLabel editSubSectionOfAreaLabel;
@@ -46,6 +44,9 @@ public class Outliner_view extends JFrame
     private JButton deleteBtn; 
     private JPanel deletePanel;
     private JMenuBar menuBar;
+    
+    //buttonPanel Class, 
+    
     
     //singleton class
     private static final Outliner_view INSTANCE = new Outliner_view();
@@ -69,12 +70,11 @@ public class Outliner_view extends JFrame
         //menuExitBtn.addActionListener(this);
 
         
+       //edit pane
        
-        
         
         menuBar = new JMenuBar();
         menuBar.add(menuLoadBtn);
-
         
         
         
@@ -169,29 +169,8 @@ public class Outliner_view extends JFrame
         this.menuLoadBtn = menuLoadBtn;
     }
 
-    public JMenuItem getMenuAddBtn() {
-        return menuAddBtn;
-    }
 
-    public void setMenuAddBtn(JMenuItem menuAddBtn) {
-        this.menuAddBtn = menuAddBtn;
-    }
 
-    public JMenuItem getMenuOpen() {
-        return menuOpen;
-    }
-
-    public void setMenuOpen(JMenuItem menuOpen) {
-        this.menuOpen = menuOpen;
-    }
-
-    public JFileChooser getFileSelector() {
-        return fileSelector;
-    }
-
-    public void setFileSelector(JFileChooser fileSelector) {
-        this.fileSelector = fileSelector;
-    }
 
     public JButton getSubmitBtn() {
         return submitBtn;

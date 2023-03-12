@@ -133,6 +133,21 @@ public class DataAccess
 
     }
     
+    
+    public static void editSection(int id, String newText)
+    {
+        int level=DataAccess.getSectionByIdFromOrderedList(id).getLevel();
+        String indent="";
+        for(int i=0; i<level; i++)
+        {
+            indent=indent+"\t";
+        }
+        DataAccess.getSectionByIdFromOrderedList(id).setText(indent+newText);
+        DataAccess.updateCSVToLatest();
+    }
+    
+    
+    
     //recursive method to go through all sections 
     private static boolean readSection(Section parent)
     {
