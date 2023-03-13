@@ -26,7 +26,9 @@ public class TextController implements ActionListener{
                 //Outliner_view.getInstance().getText().setText(Outliner.getInstance().getView());
                 
                 OutlinerView.getInstance().getSectionPanel().getText().setText(Outliner.getInstance().getView());
-                
+                OutlinerView.getInstance().getSectionPanel1().getText().setText(Outliner.getInstance().getView());
+                OutlinerView.getInstance().getSectionPanel2().getText().setText(Outliner.getInstance().getView());
+                OutlinerView.getInstance().getSectionPanel3().getText().setText(Outliner.getInstance().getView());
                 break;
             // replace text generated from data access to one generated from outliner app
             case "textSelected":
@@ -37,8 +39,8 @@ public class TextController implements ActionListener{
                 
                 //String sectionText = Outliner_view.getInstance().getEditTextArea().getText();
                 //String subSectionOf = Outliner_view.getInstance().getEditSubSectionOf().getText();
-                String sectionText = OutlinerView.getInstance().getAddDeleteEditPanel().getNewSectionContent().getText();
-                String subSectionOf=OutlinerView.getInstance().getAddDeleteEditPanel().getSubSectionOf().getText();
+                String sectionText = OutlinerView.getInstance().getAddPanel().getNewSectionContent().getText();
+                String subSectionOf=OutlinerView.getInstance().getAddPanel().getSubSectionOf().getText();
                 
                 if(subSectionOf.equals("") && sectionText.equals(""))
                 {
@@ -58,11 +60,13 @@ public class TextController implements ActionListener{
                 //setting view section text
                 //Outliner_view.getInstance().getText().setText(Outliner.getInstance().getView());
                 OutlinerView.getInstance().getSectionPanel().getText().setText(Outliner.getInstance().getView());
-                
+                OutlinerView.getInstance().getSectionPanel1().getText().setText(Outliner.getInstance().getView());
+                OutlinerView.getInstance().getSectionPanel2().getText().setText(Outliner.getInstance().getView());
+                OutlinerView.getInstance().getSectionPanel3().getText().setText(Outliner.getInstance().getView());
                 break;
             case "deleteSubmit":
                //if(Outliner_view.getInstance().getDeleteIdSection().getText().equals(""))
-                if(OutlinerView.getInstance().getAddDeleteEditPanel().getDeleteSection().getText().equals(""))
+                if(OutlinerView.getInstance().getDeletePanel().getDeleteSection().getText().equals(""))
                 {
                     //Outliner_view.getInstance().alertBox("Value not filled in");
                     OutlinerView.getInstance().alertBox("Value not filled in");
@@ -70,15 +74,20 @@ public class TextController implements ActionListener{
                 }  
                 else{
                     //Outliner.deleteSection(Integer.parseInt(Outliner_view.getInstance().getDeleteIdSection().getText()));
-                    Outliner.deleteSection(Integer.parseInt(OutlinerView.getInstance().getAddDeleteEditPanel().getDeleteSection().getText()));
+                    Outliner.deleteSection(Integer.parseInt(OutlinerView.getInstance().getDeletePanel().getDeleteSection().getText()));
                     //setting view after deleting from the model
                     //Outliner_view.getInstance().getText().setText(Outliner.getInstance().getView());
                     OutlinerView.getInstance().getSectionPanel().getText().setText(Outliner.getInstance().getView());
+                    OutlinerView.getInstance().getSectionPanel1().getText().setText(Outliner.getInstance().getView());
+                    OutlinerView.getInstance().getSectionPanel2().getText().setText(Outliner.getInstance().getView());
+                    OutlinerView.getInstance().getSectionPanel3().getText().setText(Outliner.getInstance().getView());
+                    
+                    
                     break;
                 }
             case "edit":
-                String sectionUpdateId = OutlinerView.getInstance().getAddDeleteEditPanel().getEditSectionId().getText();
-                String sectionUpdateText = OutlinerView.getInstance().getAddDeleteEditPanel().getEditSection().getText();
+                String sectionUpdateId = OutlinerView.getInstance().getEditPanel().getEditSectionId().getText();
+                String sectionUpdateText = OutlinerView.getInstance().getEditPanel().getEditSection().getText();
                 if(sectionUpdateId.equals("") || sectionUpdateText.equals(""))
                 {
                     OutlinerView.getInstance().alertBox("Value not filled in");
@@ -87,9 +96,16 @@ public class TextController implements ActionListener{
                 {
                     Outliner.editSection(Integer.parseInt(sectionUpdateId), sectionUpdateText);
                     OutlinerView.getInstance().getSectionPanel().getText().setText(Outliner.getInstance().getView());
+                    OutlinerView.getInstance().getSectionPanel1().getText().setText(Outliner.getInstance().getView());
+                    OutlinerView.getInstance().getSectionPanel2().getText().setText(Outliner.getInstance().getView());
+                    OutlinerView.getInstance().getSectionPanel3().getText().setText(Outliner.getInstance().getView());
                 }
                 
                 
+                break;
+            case "userView":
+                
+                OutlinerView.getInstance().getUserPanel().getText().setText(Outliner.getInstance().userView());
                 break;
         }
         

@@ -94,5 +94,23 @@ public class Outliner
             view = view + s.getText()+"| id:"+s.getId()+System.lineSeparator();
         }
     }
+    public static String textView()
+    {
+        String view = "";
+        for(Section s: sections)
+        {
+            view = view + s.getText()+"| id:"+s.getId()+System.lineSeparator();
+        }
+        return view;
+    }
+     public static String userView()
+    {
+        String view = "";
+        for(Section s: sections)
+        {
+            view = view + s.getUser()+"| id:"+s.getId()+System.lineSeparator();
+        }
+        return view;
+    }
 }
 

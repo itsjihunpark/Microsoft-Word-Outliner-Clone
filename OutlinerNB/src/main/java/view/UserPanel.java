@@ -16,16 +16,16 @@ import javax.swing.JTextArea;
  * @author jihun
  * Panel object that will have the text view of Outliner
  */
-public class SectionPanel extends JPanel{
+public class UserPanel extends JPanel{
     private JButton loadBttn;
     private JTextArea text;
     private JScrollPane scrollPane;
     
-    public SectionPanel()
+    public UserPanel()
     {
         this.setLayout(new BorderLayout());
-        loadBttn=new JButton("load");
-        loadBttn.setActionCommand("loadFile");
+        loadBttn=new JButton("Display User");
+        loadBttn.setActionCommand("userView");
         loadBttn.addActionListener(new TextController());
         
         text = new JTextArea();

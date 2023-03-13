@@ -14,15 +14,9 @@ import model.Section;
 public class TestData 
 {
     //static methods that returns a value that will be fed through to the test class
-    public static String testCreateSectionFromCsvLine()
+    public static String testSectionCSVFilename()
     {
-        //System.out.println("Testing [TEST ID] test1: testCreateSectionFromCsvLine"); 
-        return "1,0,RootSection instantiation";
+        return "testData"+ File.separator+ "sections";
     }
-    public static String testCreateSectionsFromCsvFile()
-    {
-        //System.out.println("Testing [TEST ID] test2: testCreateSectionsFromCsvFile");      
-        return "testdata"+File.separator + "testSections.csv";
-    }
-  
+    
 }
