@@ -6,6 +6,8 @@ package control;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import javax.swing.JOptionPane;
 import model.DataAccess;
 import model.Section;
 import view.OutlinerView;
@@ -20,6 +22,11 @@ public class TextController implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) 
     {
+        
+        
+        
+        
+        
         switch (e.getActionCommand())
         {
             case "loadFile":
@@ -29,6 +36,9 @@ public class TextController implements ActionListener{
                 OutlinerView.getInstance().getSectionPanel1().getText().setText(Outliner.getInstance().getView());
                 OutlinerView.getInstance().getSectionPanel2().getText().setText(Outliner.getInstance().getView());
                 OutlinerView.getInstance().getSectionPanel3().getText().setText(Outliner.getInstance().getView());
+                
+                
+                
                 break;
             // replace text generated from data access to one generated from outliner app
             case "textSelected":
@@ -36,7 +46,7 @@ public class TextController implements ActionListener{
                 break;
             //use Outliner singleton class functions to link to buttons to add, delete, and save functionality
             case "addNewSection":
-                
+
                 //String sectionText = Outliner_view.getInstance().getEditTextArea().getText();
                 //String subSectionOf = Outliner_view.getInstance().getEditSubSectionOf().getText();
                 String sectionText = OutlinerView.getInstance().getAddPanel().getNewSectionContent().getText();

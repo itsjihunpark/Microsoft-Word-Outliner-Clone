@@ -22,6 +22,7 @@ public class OutlinerView extends JFrame{
     private SectionPanel sectionPanel2 = new SectionPanel();
     private SectionPanel sectionPanel3 = new SectionPanel();
     
+    
     private UserPanel userPanel= new UserPanel();
     
     private AddPanel addPanel = new AddPanel();
