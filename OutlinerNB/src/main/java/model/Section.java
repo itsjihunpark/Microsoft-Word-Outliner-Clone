@@ -47,7 +47,16 @@ public class Section
     {
         //this.id = Outliner.getInstance().getSections().size()+1;
         //this.id = Outliner.getInstance().getSections().get(Outliner.getInstance().getSections().size()-1).id+1;
-        this.id = DataAccess.getSections().get(DataAccess.getSections().size()-1).id + 1;
+        if(DataAccess.getSections().size()==0)
+        {
+            this.id = 1;
+        }
+        else
+        {
+            this.id = DataAccess.getSections().get(DataAccess.getSections().size()-1).id + 1;
+        }
+        
+        
         //System.out.println(DataAccess.getSections().get(DataAccess.getSections().size()-1).id + 1);
         this.subSectionOf = subSectionOf;
         if(subSectionOf ==0)

@@ -21,6 +21,7 @@ public class Outliner
     private static ArrayList<Section> sections = DataAccess.getSectionInOrder();
     private static String view;
     private static final Outliner INSTANCE = new Outliner();
+
     public static Outliner getInstance()
     {
         return INSTANCE;
@@ -32,7 +33,8 @@ public class Outliner
         //data access
         
         //Reads all csv and spits out rootsection which is the point of access  
-        DataAccess.readSectionsFromCSVFile("sections.csv");
+        DataAccess.setFileName("sections.csv");
+        DataAccess.readSectionsFromCSVFile();
         //builds the string view
         createView();
         

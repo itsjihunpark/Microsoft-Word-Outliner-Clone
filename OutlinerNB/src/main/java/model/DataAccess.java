@@ -25,7 +25,19 @@ public class DataAccess
     private static ArrayList<Section> sections = new ArrayList();
     public static final Comparator<Section> BY_ID = new DataAccess.ById();
     
-    public static void readSectionsFromCSVFile(String fileName)
+    private static String fileName;
+
+    public static String getFileName() {
+        return fileName;
+    }
+
+    public static void setFileName(String fileName) {
+        DataAccess.fileName = fileName;
+    }
+    
+    
+    
+    public static void readSectionsFromCSVFile()
     {
         sections = new ArrayList();
         String data="";    
@@ -78,7 +90,7 @@ public class DataAccess
         try{
             String sectionsCsv = "";
             String data="";
-            BufferedReader br = new BufferedReader(new FileReader("sections.csv"));
+            BufferedReader br = new BufferedReader(new FileReader(fileName));
             while((data = br.readLine())!=null)
             {
                 sectionsCsv = sectionsCsv+data+System.lineSeparator();
@@ -87,7 +99,7 @@ public class DataAccess
             text = text.replaceAll("\t", "");
             sectionsCsv = sectionsCsv+newSection.getId()+","+newSection.getSubSectionOf()+","+ text +","+newSection.getLevel()+System.lineSeparator();  
             
-            BufferedWriter bw = new BufferedWriter(new FileWriter("sections.csv"));
+            BufferedWriter bw = new BufferedWriter(new FileWriter(fileName));
             bw.write(sectionsCsv);
             bw.close();
         }
@@ -96,7 +108,7 @@ public class DataAccess
             
         }
         sectionInOrder = new ArrayList();
-        readSectionsFromCSVFile("sections.csv");
+        readSectionsFromCSVFile();
     }
        
     
@@ -119,7 +131,7 @@ public class DataAccess
         
         
         try{
-            BufferedWriter bw = new BufferedWriter(new FileWriter("sections.csv"));
+            BufferedWriter bw = new BufferedWriter(new FileWriter(fileName));
             bw.write(csv);
             bw.close();
         }
@@ -128,7 +140,7 @@ public class DataAccess
             
         }
         sectionInOrder = new ArrayList();
-        readSectionsFromCSVFile("sections.csv");
+        readSectionsFromCSVFile();
         updateCSVToLatest();
 
     }
@@ -206,7 +218,7 @@ public class DataAccess
             csv = csv + s.getId() +","+s.getSubSectionOf()+","+text+","+s.getLevel()+System.lineSeparator();
         }
         try{
-            BufferedWriter bw = new BufferedWriter(new FileWriter("sections.csv"));
+            BufferedWriter bw = new BufferedWriter(new FileWriter(fileName));
             bw.write(csv);
             bw.close();
         }
