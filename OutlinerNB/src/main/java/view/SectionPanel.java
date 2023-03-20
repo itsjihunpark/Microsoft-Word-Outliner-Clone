@@ -4,6 +4,7 @@
  */
 package view;
 
+import control.Outliner;
 import control.TextController;
 import java.awt.BorderLayout;
 import java.awt.event.MouseAdapter;
@@ -16,6 +17,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.text.BadLocationException;
+import model.Section;
 
 /**
  *
@@ -49,18 +51,61 @@ public class SectionPanel extends JPanel{
                 } catch (BadLocationException ex) {
                     Logger.getLogger(SectionPanel.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                String inputValue = JOptionPane.showInputDialog("Enter new section value");
+                
+                String inputValue="";
                 if(clickedText.equals("")){
-                    System.out.println("You're creating a new section");
+                    System.out.println("user wants to create a new section"); //complete
+                    
+                    do{
+                        inputValue= JOptionPane.showInputDialog("Enter new section value"); 
+                    }
+                    while(inputValue.isEmpty());
+
+                    Outliner.addSection(new Section(0,inputValue));
                     
                 }
-                else{
+                else{ //case where a valid section was clicked
                     
                     int id = clickedText.lastIndexOf("id:")+3;
                     int clickedSectionId = Integer.parseInt(clickedText.substring(id).trim());
-                    System.out.println("You're creating a sub section of id: "+ clickedSectionId);
+                    
+                    Object[] possibleValues= {"Add subsection","Edit", "Delete", "Assign a user"};
+                    Object selectedValue = JOptionPane.showInputDialog(null,"What do you want to do?","Input",
+                                                                        JOptionPane.INFORMATION_MESSAGE, null,possibleValues, possibleValues[0]);
+                    
+                    if(selectedValue.equals("Add subsection")){ //complete
+                        System.out.println("user wants to create a new subsection");
+                        System.out.println("user is creating a sub section of id: "+ clickedSectionId);
+                        do{
+                            inputValue= JOptionPane.showInputDialog("Enter new section value"); 
+                        }
+                        while(inputValue.isEmpty());
+                        Outliner.addSection(new Section(clickedSectionId,inputValue));
+                        
+                        
+                        
+                    }
+                    else if(selectedValue.equals("Delete")){ //complete
+                        System.out.println("user wants to delete this section");
+                        Outliner.deleteSection(clickedSectionId);
+                        
+                    }
+                    else if(selectedValue.equals("Edit"))
+                    {
+                        System.out.println("User wants to edit this section");
+                        do{
+                            inputValue= JOptionPane.showInputDialog("Enter updated text for this section"); 
+                        }
+                        while(inputValue.isEmpty());
+                        Outliner.editSection(clickedSectionId, inputValue);
+                        
+                    }
+                    else if(selectedValue.equals("Assign a user")){
+                        System.out.println("User wants to assign a user");
+                    }
+                    
                 }
-   
+                OutlinerView.getInstance().getSectionPanel().getText().setText(Outliner.getInstance().getView());
             }
         });
         
