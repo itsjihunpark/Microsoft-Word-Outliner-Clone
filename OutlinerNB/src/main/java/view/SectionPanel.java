@@ -5,7 +5,6 @@
 package view;
 
 import control.Outliner;
-import control.TextController;
 import java.awt.BorderLayout;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -32,9 +31,7 @@ public class SectionPanel extends JPanel{
     public SectionPanel()
     {
         this.setLayout(new BorderLayout());
-        loadBttn=new JButton("load");
-        loadBttn.setActionCommand("loadFile");
-        loadBttn.addActionListener(new TextController());
+        
         
         text = new JTextArea();
         
@@ -113,7 +110,7 @@ public class SectionPanel extends JPanel{
         
         scrollPane = new JScrollPane(text);
         
-        this.add(loadBttn, BorderLayout.SOUTH);
+        //this.add(loadBttn, BorderLayout.SOUTH);
         this.add(scrollPane, BorderLayout.CENTER);
     }
 

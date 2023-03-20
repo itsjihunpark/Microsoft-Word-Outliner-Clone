@@ -4,7 +4,6 @@
  */
 package view;
 
-import control.TextController;
 import java.awt.BorderLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -26,7 +25,7 @@ public class UserPanel extends JPanel{
         this.setLayout(new BorderLayout());
         loadBttn=new JButton("Display User");
         loadBttn.setActionCommand("userView");
-        loadBttn.addActionListener(new TextController());
+        
         
         text = new JTextArea();
         scrollPane = new JScrollPane(text);

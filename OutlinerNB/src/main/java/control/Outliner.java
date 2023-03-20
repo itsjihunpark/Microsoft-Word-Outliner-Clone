@@ -10,7 +10,7 @@ import java.util.Comparator;
 import model.DataAccess;
 import model.Section;
 import view.OutlinerView;
-import view.Outliner_view;
+
 
 /**
  *
@@ -40,7 +40,7 @@ public class Outliner
         
         //Views generated here
         OutlinerView.getInstance();
-        
+        OutlinerView.getInstance().getSectionPanel().getText().setText(view);
     }
     
     
