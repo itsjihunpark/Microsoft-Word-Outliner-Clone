@@ -67,7 +67,13 @@ public class Outliner
     /**
      * manipulates array within this class 
      */
-    
+    public static void assignUser(int id, String user)
+    {
+        DataAccess.getSectionByIdFromOrderedList(id).setUser(user);
+        DataAccess.updateCSVToLatest();
+        sections = DataAccess.getSectionInOrder();
+        createView();
+    }
     public static void addSection(Section newSection)
     {
         DataAccess.writeToCSVNewSection(newSection);
@@ -93,7 +99,14 @@ public class Outliner
         Outliner.view = "";
         for(Section s: sections)
         {
-            view = view + s.getText()+"| id:"+s.getId()+System.lineSeparator();
+            if(s.getUser().equals("n/a"))
+            {
+                view = view + s.getText()+"| id:"+s.getId()+System.lineSeparator();
+            }
+            else
+            {
+                view = view + s.getText()+" -> user: "+s.getUser()+"| id:"+s.getId()+System.lineSeparator();
+            }
         }
     }
     public static String textView()

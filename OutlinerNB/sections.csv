@@ -1,16 +1,18 @@
-1,0,Get programming 2 coursework done,0
-2,0,Get DB coursework checked,0
-3,0,Get numPy done,0
-4,1,Create testing plan,1
-5,1,Create test classes,1
-6,5,Create test methods,2
-9,1,Test with dummy Data,1
-10,2,Add user class to the model and create log in page,1
-11,3,Complete cw for computing Systems,1
-12,0,Testing Jihun's application again,0
-13,0,add,0
-14,0,add,0
-15,0,add,0
-17,0,new section value,0
-18,0,edit test,0
-19,18,new,1
+1,0,Get programming 2 coursework done,0,n/a
+2,0,Get DB coursework checked,0,n/a
+3,0,Get numPy done,0,n/a
+4,1,Create testing plan,1,n/a
+5,1,Create test classes,1,n/a
+6,5,Create test methods,2,n/a
+9,1,Test with dummy Data,1,n/a
+10,2,Add user class to the model and create log in page,1,n/a
+11,3,Complete cw for computing Systems,1,n/a
+12,0,Testing Jihun's application again,0,n/a
+13,0,add,0,n/a
+14,0,add,0,n/a
+15,0,add,0,n/a
+17,0,new section value,0,n/a
+18,0,edit test,0,n/a
+19,18,new,1,n/a
+21,19,new sub test,2,n/a
+24,0,im editing this,0,Jihun

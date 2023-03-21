@@ -14,9 +14,4 @@ import model.Section;
 public class TestData 
 {
     //static methods that returns a value that will be fed through to the test class
-    public static String testSectionCSVFilename()
-    {
-        return "testData"+ File.separator+ "sections";
-    }
-    
 }

@@ -47,7 +47,7 @@ public class DataAccess
             while((data = br.readLine())!=null)
             {
                 String[] s = data.split(",");
-                Section section = new Section(Integer.parseInt(s[0]), Integer.parseInt(s[1]), s[2], Integer.parseInt(s[3]));
+                Section section = new Section(Integer.parseInt(s[0]), Integer.parseInt(s[1]), s[2], Integer.parseInt(s[3]), s[4]);
                 sections.add(section);
                 //System.out.println(section.getId());
             }
@@ -97,7 +97,7 @@ public class DataAccess
             }     
             String text = newSection.getText();
             text = text.replaceAll("\t", "");
-            sectionsCsv = sectionsCsv+newSection.getId()+","+newSection.getSubSectionOf()+","+ text +","+newSection.getLevel()+System.lineSeparator();  
+            sectionsCsv = sectionsCsv+newSection.getId()+","+newSection.getSubSectionOf()+","+ text +","+newSection.getLevel()+","+newSection.getUser()+System.lineSeparator();  
             
             BufferedWriter bw = new BufferedWriter(new FileWriter(fileName));
             bw.write(sectionsCsv);
@@ -126,7 +126,7 @@ public class DataAccess
         {
             String text = s.getText();
             text = text.replaceAll("\t", "");
-            csv = csv + s.getId() +","+s.getSubSectionOf()+","+text+","+s.getLevel()+System.lineSeparator();
+            csv = csv + s.getId() +","+s.getSubSectionOf()+","+text+","+s.getLevel()+","+s.getUser()+System.lineSeparator();
         }
         
         
@@ -215,7 +215,7 @@ public class DataAccess
         {
             String text = s.getText();
             text = text.replaceAll("\t", "");
-            csv = csv + s.getId() +","+s.getSubSectionOf()+","+text+","+s.getLevel()+System.lineSeparator();
+            csv = csv + s.getId() +","+s.getSubSectionOf()+","+text+","+s.getLevel()+","+s.getUser()+System.lineSeparator();
         }
         try{
             BufferedWriter bw = new BufferedWriter(new FileWriter(fileName));

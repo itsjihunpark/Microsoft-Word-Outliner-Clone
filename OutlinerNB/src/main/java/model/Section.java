@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class Section 
 {
     //Class attributes
-    private User user;
+    private String user;
     private Integer id;
     private Integer subSectionOf;
     private String text;
@@ -23,7 +23,7 @@ public class Section
     
     //constructors
     //constructor when instatiating from csv
-    public Section(int id, int subSectionOf, String text, int level)
+    public Section(int id, int subSectionOf, String text, int level, String user)
     {
         this.id = id;
         this.subSectionOf = subSectionOf;
@@ -36,7 +36,7 @@ public class Section
         //"      "
         //"           "
         this.text = space+text;
-        
+        this.user=user;
     }
     //constructor when instatiating from add new section method
     public Section()
@@ -76,6 +76,7 @@ public class Section
         //"      "
         //"           "
         this.text = space+text;
+        this.user = "n/a";
     }
     public void addSubSection(Section s)
     {
@@ -125,11 +126,11 @@ public class Section
         this.subSection = subSection;
     }
 
-    public User getUser() {
+    public String getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(String user) {
         this.user = user;
     }
 

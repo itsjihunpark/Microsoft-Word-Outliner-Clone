@@ -5,6 +5,9 @@
 package uk.ac.kingston.ci5105.outliner;
 
 import control.Outliner;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import model.DataAccess;
 import view.OutlinerView;
 
@@ -22,12 +25,25 @@ public class RunTests {
         OutlinerView.getInstance();
         OutlinerView.getInstance().getSectionPanel().getText().setText(Outliner.getView());   
         
-        //tests go below here
-        System.out.println(Tests.testAddNewSection());
-        System.out.println(Tests.testSectionConstrutorIdAllocation());
-        System.out.println(Tests.testAddSubSection());
-        System.out.println(Tests.testEditSection());
-        System.out.println(Tests.testDeleteSection());
+        try {
+            
+            System.out.println(Tests.testAddNewSection());
+            TimeUnit.SECONDS.sleep(1);
+            System.out.println(Tests.testSectionConstrutorIdAllocation());
+            TimeUnit.SECONDS.sleep(1);
+            System.out.println(Tests.testAddSubSection());
+            TimeUnit.SECONDS.sleep(1);
+            System.out.println(Tests.testEditSection());
+            TimeUnit.SECONDS.sleep(1);
+            System.out.println(Tests.testDeleteSection());
+            TimeUnit.SECONDS.sleep(1);
+            System.out.println(DataAccess.getSections().size());
+            
+        
+        } catch (InterruptedException ex) {
+            Logger.getLogger(RunTests.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }
     
 }
