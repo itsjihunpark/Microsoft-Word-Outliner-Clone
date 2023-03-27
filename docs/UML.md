@@ -1,25 +1,12 @@
-# Title
-UML Class Diagram Template
-- **Start date**: 01-01-1970  
-- **Due date**: 01-01-1970  
-- **Main Author:** @ku63026  
-- **Collaborators (optional):**  
-  - @ku13043, @ku17655  
-- **Repository:**
+# Outliner UML
+UML Class Diagram
+- **Start date**: 01-01-2023  
+- **Due date**: 01-04-2023  
+- **Main Author:** @k2115030
+- **Repository: Outliner**
 [Outliner in Personal Portfolio]() Add URL 
 
-# 1 Sub-Heading
-
-An example [Mermaid.js](https://mermaid.js.org/) UML Class Diagram template.  This uses Markdown Perhaps some explanatory text about the application could go here with links if required.
-[Info about Markdown](https://markdown.land/)  
-[Info about Class Diagrams in Mermaid.js](https://mermaid.js.org/syntax/classDiagram.html)  
- 
-
-# 2 Sub-Heading
-Example Class Diagram
-
-[This was done in the Mermaid Live Editor](https://mermaid.live/)  
-
+# 1 Class diagram
 
 ```mermaid
 classDiagram
