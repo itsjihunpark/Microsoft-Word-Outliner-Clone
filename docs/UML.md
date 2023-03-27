@@ -52,7 +52,30 @@ classDiagram
       +createView(): void
     }
     class Section{
-      
+      -user:String
+      -id:Integer
+      -subSectionOf:Integer
+      -text:String
+      -level:Integer
+      -subSection:ArrayList~Sections~
+      +Section(int id, int subSectionOf, String text, int level, String user):void
+      +Section():void
+      +Section(int subSectionOf, String text):void
+      +addSubSection(Section s)
+      +toString():String
+      +getId(): Integer
+      +setId(Integer id): void
+      +getSubSectionOf(): Integer
+      +setSubSectionOf(Integer subSectionOf): void
+      +getText(): String
+      +setText(String text): void
+      +getSubSections(): ArrayList~Sections~
+      +setSubSection(ArrayList~Sections~): void
+      +getUser(): String
+      +setUser(String user): void
+      +getLevel(): Integer
+      +setLevel(Integer level):void
+
     }
 
 ```
