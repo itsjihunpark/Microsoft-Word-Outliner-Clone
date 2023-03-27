@@ -31,10 +31,10 @@ classDiagram
     }
 
     class Outliner{
-      -section: ArrayList~Sections~
-      -view: String
-      -INSTANCE: Outliner
-      +getInstance(): Outliner
+      -section$: ArrayList~Sections~
+      -view$: String
+      -INSTANCE: Outliner$
+      +getInstance()$: Outliner
       +main(String arg[])::void
       +getSections(): ArrayList~Sections~
       +setSections(ArrayList~Sections~): void
