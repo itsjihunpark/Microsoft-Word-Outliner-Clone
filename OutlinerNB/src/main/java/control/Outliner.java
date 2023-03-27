@@ -31,7 +31,6 @@ public class Outliner
     public static void main(String arg[])
     {
         //data access
-        
         //Reads all csv and spits out rootsection which is the point of access  
         DataAccess.setFileName("sections.csv");
         DataAccess.readSectionsFromCSVFile();
@@ -46,7 +45,7 @@ public class Outliner
     }
     
     
-    public  ArrayList<Section> getSections() {
+    public ArrayList<Section> getSections(){
         return sections;
     }
 
@@ -109,23 +108,7 @@ public class Outliner
             }
         }
     }
-    public static String textView()
-    {
-        String view = "";
-        for(Section s: sections)
-        {
-            view = view + s.getText()+"| id:"+s.getId()+System.lineSeparator();
-        }
-        return view;
-    }
-     public static String userView()
-    {
-        String view = "";
-        for(Section s: sections)
-        {
-            view = view + s.getUser()+"| id:"+s.getId()+System.lineSeparator();
-        }
-        return view;
-    }
+
+
 }
 
