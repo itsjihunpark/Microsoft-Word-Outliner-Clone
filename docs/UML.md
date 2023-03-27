@@ -36,28 +36,23 @@ classDiagram
     }
 
     class Outliner{
-      _-section: ArrayList~Sections~_
-      _-view: String_
-      _-INSTANCE: Outliner_
-      +getInstance()
-      +
-      +
-      
+      -section: ArrayList~Sections~
+      -view: String
+      -INSTANCE: Outliner
+      +getInstance(): Outliner
+      +main(String arg[])::void
+      +getSections(): ArrayList~Sections~
+      +setSections(ArrayList~Sections~): void
+      +getView(): String
+      +setView(String): void
+      +assignUser(String user): void
+      +addSection(Section newSection):void
+      +deleteSection(int id):void
+      +editSection(int id, String newText): void
+      +createView(): void
     }
     class Section{
-      -level: int
-      -text: String
-      -subSections: List ~Section~
-      +getLevel() int
-      +setLevel(int level)
-      +getText() String
-      +setText(String text)
-      +getSubSections() ArrayList~Section~
-      +setSubSection(ArrayList~Section~ subSection)
-      +Section(int level, String text)
-      +addSubsection(int level, String text)
-      +addSubsection(Section subSection)
-      +toString() String
+      
     }
 
 ```
