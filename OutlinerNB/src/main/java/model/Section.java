@@ -22,7 +22,15 @@ public class Section
     private ArrayList<Section> subSection = new ArrayList();
     
     //constructors
-    //constructor when instatiating from csv
+    /**
+     * this constructor is used when Sections are instantiated from a csv format containing the attributes of a section
+     * @param id id of the section
+     * @param subSectionOf the id of the parenting section
+     * @param text the actual section content
+     * @param level the level of the section to determine the amount it will be tabbed by
+     * @param user the user assigned to this new section
+     * 
+    */
     public Section(int id, int subSectionOf, String text, int level, String user)
     {
         this.id = id;
@@ -43,6 +51,12 @@ public class Section
     {
         
     }
+    
+    /**
+     * this constructor is used when sections are created from the application to be written to the csv
+     * @param subSectionOf id of the parenting section, set as zero when there are no parenting section 
+     * @param text the text itself of a section
+     */
     public Section(int subSectionOf, String text)
     {
         //this.id = Outliner.getInstance().getSections().size()+1;
@@ -78,22 +92,18 @@ public class Section
         this.text = space+text;
         this.user = "n/a";
     }
+    /**
+     * 
+     * @param s adds this section to the parenting section as a subsection
+     */
     public void addSubSection(Section s)
     {
         this.subSection.add(s);
     }    
 
-    @Override
-    public String toString() {
-        return this.text;
-    }
     
+
     
-    
-    
-    //All getters and Setters
-    
-    //Getter/Setter id
     public Integer getId() {
         return id;
     }

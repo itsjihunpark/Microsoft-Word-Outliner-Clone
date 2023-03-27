@@ -27,10 +27,17 @@ public class DataAccess
     
     private static String fileName;
 
+    /**
+     * 
+     * @return the filename that is being read and written to.
+     */
     public static String getFileName() {
         return fileName;
     }
-
+    /**
+     * 
+     * @param fileName is set as the file to be read and written to 
+     */
     public static void setFileName(String fileName) {
         DataAccess.fileName = fileName;
     }
