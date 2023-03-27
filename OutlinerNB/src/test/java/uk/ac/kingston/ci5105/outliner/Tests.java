@@ -92,5 +92,35 @@ public class Tests {
         }
         
     }
+    public static boolean testAddUser()
+    {
+        System.out.println("Testing adding a user to a section");
+        Outliner.assignUser(2, "TestUser");
+        OutlinerView.getInstance().getSectionPanel().getText().setText(Outliner.getInstance().getView());
+        if(DataAccess.getSectionByIdFromOrderedList(2).getUser().equals("TestUser")){
+            System.out.println("TestUser added to section id:2");
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public static boolean testSubSectionAbility()//works but probably won't use
+    {
+        System.out.println("Tesing ability to create infinate number of subsection");
+        for(int i =0; i<100; i++)
+        {
+            Outliner.addSection(new Section(i,"Testing subsection"));
+            OutlinerView.getInstance().getSectionPanel().getText().setText(Outliner.getInstance().getView());
+        }
+        
+        if(DataAccess.getSectionByIdFromOrderedList(99).getLevel()==98)
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
     
 }

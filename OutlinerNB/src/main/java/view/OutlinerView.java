@@ -7,9 +7,11 @@ package view;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
+import javax.swing.JTextArea;
 
 /**
  *
@@ -34,9 +36,13 @@ public class OutlinerView extends JFrame{
     
     private OutlinerView(){
         tabbedPane = new JTabbedPane();
-        tabbedPane.add("outline",sectionPanel);
-
+        JPanel instruction = new JPanel();
+        String inst = "1. Click on empty space to add new section\n2. Click on an existing section to add subsection, or edit/delete section or assign a user \n3. Everything is saved realtime to the sections.csv file so no need to worry about saving";
+        JTextArea instrText = new JTextArea(inst);
+        instruction.add(instrText);
         
+        tabbedPane.add("outline",sectionPanel);
+        tabbedPane.add("how to", instruction);
         
         this.add(tabbedPane, BorderLayout.CENTER);
         this.setSize(500,600);

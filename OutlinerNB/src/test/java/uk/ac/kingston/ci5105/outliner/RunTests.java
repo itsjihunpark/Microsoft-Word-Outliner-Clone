@@ -28,15 +28,17 @@ public class RunTests {
         try {
             
             System.out.println(Tests.testAddNewSection());
-            TimeUnit.SECONDS.sleep(1);
+            TimeUnit.SECONDS.sleep(2);
             System.out.println(Tests.testSectionConstrutorIdAllocation());
-            TimeUnit.SECONDS.sleep(1);
+            TimeUnit.SECONDS.sleep(2);
             System.out.println(Tests.testAddSubSection());
-            TimeUnit.SECONDS.sleep(1);
+            TimeUnit.SECONDS.sleep(2);
+            System.out.println(Tests.testAddUser());
+            TimeUnit.SECONDS.sleep(2);
             System.out.println(Tests.testEditSection());
-            TimeUnit.SECONDS.sleep(1);
+            TimeUnit.SECONDS.sleep(2);
             System.out.println(Tests.testDeleteSection());
-            TimeUnit.SECONDS.sleep(1);
+            TimeUnit.SECONDS.sleep(2);
             System.out.println(DataAccess.getSections().size());
             
         
