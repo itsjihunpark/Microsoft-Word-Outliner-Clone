@@ -23,7 +23,7 @@ Example Class Diagram
 
 ```mermaid
 classDiagram
-    RootSection "1" o-- "0..*" Section : has a 
+    Outliner "1" o-- "0..*" Section : has a 
     Section "1" o-- "0..*" Section : has a
 
     class User{
@@ -35,13 +35,13 @@ classDiagram
     
     }
 
-    class RootSection{
-      -rootSections: ArrayList~Sections~
-      +getRootSections() ArrayList~Section~
-      +setRootSections(ArrayList ~Section~ rootSections) 
-      +addRootSections(ArrayList ~Section~ rootSection)
-      +addRootSections(int level, String text)
-      +readAll(ArrayList ~Section~ rootSections)
+    class Outliner{
+      _-section: ArrayList~Sections~_
+      _-view: String_
+      _-INSTANCE: Outliner_
+      +getInstance()
+      +
+      +
       
     }
     class Section{
