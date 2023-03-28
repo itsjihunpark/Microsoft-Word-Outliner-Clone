@@ -21,8 +21,8 @@ import java.util.Comparator;
  */
 public class DataAccess 
 {
-    private static ArrayList<Section> sectionInOrder = new ArrayList();
-    private static ArrayList<Section> sections = new ArrayList();
+    private static ArrayList<Section> sectionInOrder = new ArrayList();//ordered for string view
+    private static ArrayList<Section> sections = new ArrayList(); //ordered for CSV
     public static final Comparator<Section> BY_ID = new DataAccess.ById();
     
     private static String fileName;
@@ -164,8 +164,6 @@ public class DataAccess
         DataAccess.getSectionByIdFromOrderedList(id).setText(indent+newText);
         DataAccess.updateCSVToLatest();
     }
-    
-    
     
     //recursive method to go through all sections 
     private static boolean readSection(Section parent)
