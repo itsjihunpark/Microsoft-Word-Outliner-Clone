@@ -103,51 +103,90 @@ public class Section
 
     
 
-    
+    /**
+     * returns the id of this section
+     * @return id
+     */
     public Integer getId() {
         return id;
     }
-    
+    /**
+     * sets the id of this section
+     * @param id 
+     */
     public void setId(Integer id) {
         this.id = id;
     }
-    //Getter/Setter subSectionOf
+    /**
+     * returns the id of the parenting section of this section
+     * @return the id of the parenting section 
+     */
     public Integer getSubSectionOf() {
         return subSectionOf;
     }
 
+    /**
+     * sets the id of the parenting section of this section
+     * @param subSectionOf 
+     */
     public void setSubSectionOf(Integer subSectionOf) {
         this.subSectionOf = subSectionOf;
     }
-    //Getter/Setter text
+    /**
+     * returns the text of this section
+     * @return text
+     */
     public String getText() {
         return text;
     }
 
+    /**
+     * sets the text of this section
+     * @param text 
+     */
     public void setText(String text) {
         this.text = text;
     }
-    //Getter/Setter ArrayList<Section> subSection
+    /**
+     * returns the arraylist of the subsection that this section has
+     * @return subSection
+     */
     public ArrayList<Section> getSubSections() {
         return subSection;
     }
-
+    /**
+     * sets the list of subsections of this section
+     * @param subSection 
+     */
     public void setSubSection(ArrayList<Section> subSection) {
         this.subSection = subSection;
     }
-
+    /**
+     * returns the user assigned to this section
+     * @return user
+     */
     public String getUser() {
         return user;
     }
 
+    /**
+     * sets user to this section
+     * @param user 
+     */
     public void setUser(String user) {
         this.user = user;
     }
-
+    /**
+     * returns the level of this section
+     * @return level
+     */
     public Integer getLevel() {
         return level;
     }
-
+    /**
+     * sets the level of this section
+     * @param level 
+     */
     public void setLevel(Integer level) {
         this.level = level;
     }
