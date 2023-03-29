@@ -28,14 +28,14 @@ public class DataAccess
     private static String fileName;
 
     /**
-     * 
+     * gets the current csv file that's being read from
      * @return the filename that is being read and written to.
      */
     public static String getFileName() {
         return fileName;
     }
     /**
-     * 
+     * Sets the file to read from and write to
      * @param fileName is set as the file to be read and written to 
      */
     public static void setFileName(String fileName) {

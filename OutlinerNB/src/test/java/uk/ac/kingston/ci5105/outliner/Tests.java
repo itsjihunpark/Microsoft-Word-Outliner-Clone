@@ -20,7 +20,7 @@ public class Tests {
         System.out.println("Testing adding new section");//edit here
         Section testSection = new Section(0,"Test new section");
         int testId = testSection.getId();
-        Outliner.addSection(testSection);
+        Outliner.addSection(testSection); //this is being tested
         OutlinerView.getInstance().getSectionPanel().getText().setText(Outliner.getInstance().getView());
         
         if(DataAccess.getSectionByIdFromUnOrderedList(testId).getId() == testId)
@@ -50,7 +50,7 @@ public class Tests {
     public static boolean testAddSubSection()
     {
         System.out.println("Testing adding subsection"); //edit here
-        Outliner.addSection(new Section(1, "New subsection test"));
+        Outliner.addSection(new Section(1, "New subsection test")); //this is being tested
         OutlinerView.getInstance().getSectionPanel().getText().setText(Outliner.getInstance().getView());
         String subSectionText = Outliner.getInstance().getSections().get(0).getSubSections().get(0).getText().trim();
         if(subSectionText.equals("New subsection test"))

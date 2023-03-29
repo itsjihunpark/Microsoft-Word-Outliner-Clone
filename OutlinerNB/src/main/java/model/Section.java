@@ -93,7 +93,7 @@ public class Section
         this.user = "n/a";
     }
     /**
-     * 
+     * adds the supplied section to this section as its sub section
      * @param s adds this section to the parenting section as a subsection
      */
     public void addSubSection(Section s)

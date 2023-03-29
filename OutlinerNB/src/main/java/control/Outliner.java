@@ -23,15 +23,19 @@ public class Outliner
     private static final Outliner INSTANCE = new Outliner();
 
     /**
-     * @see gets one and only instance of an outliner object
      * 
+     *  gets one and only instance of an outliner object
+     *  @return Outliner instance
      */
     public static Outliner getInstance()
     {
         return INSTANCE;
     }  
     
-    
+    /**
+     * Starts the whole program
+     * @param arg
+     */
     public static void main(String arg[])
     {
         //data access
@@ -49,14 +53,14 @@ public class Outliner
     }
     
     /**
-     * 
+     * returns the list of sections ordered by how they will be displayed
      * @return returns an ArrayList of sections 
      */
     public ArrayList<Section> getSections(){
         return sections;
     }
     /**
-     * 
+     * sets the list of section a view will be created from
      * @param sections is an ArrayList of section to be set
      */
     public void setSections(ArrayList<Section> sections) {
@@ -64,7 +68,7 @@ public class Outliner
     }
 
     /**
-     * 
+     * returns a string view of how the sections will be displayed
      * @return a string of the view
      */
     public static String getView() {
@@ -72,7 +76,7 @@ public class Outliner
     }
 
     /**
-     * 
+     * sets the view with the supplied string
      * @param view sets the view with the supplied string
      */
     public static void setView(String view) {
@@ -82,6 +86,7 @@ public class Outliner
 
     
     /**
+     * Assigns the user represented by the string supplied to the selected id
      * @param id id of the section to assign a user to
      * @param user string storing the name of the user to be assigned to the selected section
      */
@@ -94,7 +99,7 @@ public class Outliner
     }
     
     /**
-     * 
+     * adds the supplied section to the outliner view
      * @param newSection a section object to be added to the outliner section
      */
     public static void addSection(Section newSection)
@@ -104,7 +109,7 @@ public class Outliner
         createView();
     }
     /**
-     * 
+     * deletes the section with the supplied id
      * @param id id of the section to be deleted
      */
     public static void deleteSection(int id)
@@ -114,7 +119,7 @@ public class Outliner
         createView();
     }
     /**
-     * 
+     * edits the section with the supplied id with the new text supplied as a string
      * @param id id of the section to be edited
      * @param newText text to be updated to the selected Section
      */
@@ -125,7 +130,8 @@ public class Outliner
         createView();
     }
     /**
-     * @see this goes through all sections in the ArrayList<Section> section to build a string view
+     * iteratively goes through the arraylist of sections in outliner to create a string view of the outliner
+     * this goes through all sections in the ArrayList&lt;Section&gt; section to build a string view
      */
     public static void createView()
     {
