@@ -16,6 +16,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.text.BadLocationException;
+import model.DataAccess;
 import model.Section;
 
 /**
@@ -91,7 +92,8 @@ public class SectionPanel extends JPanel{
                     {
                         System.out.println("User wants to edit this section");
                         do{
-                            inputValue= JOptionPane.showInputDialog("Enter updated text for this section"); 
+                            
+                            inputValue= JOptionPane.showInputDialog("Update this text for this section",DataAccess.getSectionByIdFromOrderedList(clickedSectionId).getText().trim()); 
                         }
                         while(inputValue.isEmpty());
                         Outliner.editSection(clickedSectionId, inputValue);
