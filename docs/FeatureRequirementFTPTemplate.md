@@ -3,7 +3,8 @@ Functional Test Plan Template
 - **Start date**: 01/20/2023  
 - **Due date**: not sure yet 
 - **Main Author:** @k2115030   
-- **Repository:** [Outliner in Personal Portfolio]
+- **Repository:** 
+[Outliner in Personal Portfolio]
 
 
 # 1 Sub-Heading
