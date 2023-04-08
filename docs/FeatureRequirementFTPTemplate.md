@@ -1,7 +1,7 @@
 # Outliner App
 Functional Test Plan Template  
 - **Start date**: 01/20/2023  
-- **Due date**: not sure yet 
+- **Due date**: 14/04/2023
 - **Main Author:** @k2115030   
 - **Repository:** 
 [Outliner in Personal Portfolio]
