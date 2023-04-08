@@ -100,7 +100,7 @@ public class SectionPanel extends JPanel{
                     else if(selectedValue.equals("Assign a user")){
                         System.out.println("User wants to assign a user");
                         do{
-                            inputValue= JOptionPane.showInputDialog("Enter updated text for this section"); 
+                            inputValue= JOptionPane.showInputDialog("Enter user name"); 
                         }
                         while(inputValue.isEmpty());
                         Outliner.assignUser(clickedSectionId, inputValue);

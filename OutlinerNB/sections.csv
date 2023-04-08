@@ -1,15 +1,37 @@
-1,0,Get programming 2 coursework done,0,n/a
-2,0,Get DB coursework checked,0,n/a
-3,0,Get numPy done,0,n/a
-4,1,Create testing plan,1,n/a
-5,1,Create test classes,1,n/a
-6,5,Create test methods,2,n/a
-9,1,Test with dummy Data,1,n/a
-10,2,Add user class to the model and create log in page,1,n/a
-11,3,Complete cw for computing Systems,1,n/a
-12,0,Testing Jihun's application again,0,n/a
-13,0,add,0,n/a
-14,0,add,0,n/a
-15,0,add,0,n/a
-17,0,new section value,0,David
-18,17,cb,1,cv
+1,0,WebApp for Fishing Club,0,n/a
+2,1,Table of Contents,1,n/a
+3,2,TBC – ToC added at the end (note to self: use Word styles for headings),2,n/a
+4,1,Abstract,1,n/a
+5,4,TBC – write at the end once the project is written,2,n/a
+6,1,Introduction,1,n/a
+7,6,Background and overall motivation,2,n/a
+8,1,Aims & Objectives,1,n/a
+9,8,Aims: Overarching aims of the WebApp,2,n/a
+10,9,TBC - one or two aims,3,n/a
+11,8,Objectives:,2,n/a
+12,11,SMART objectives – specific; measurable; achievable; timebound,3,n/a
+13,12,1. Gather requirements for WebApp,4,n/a
+14,12,2. Write design document,4,n/a
+15,12,3. Evaluate and iterate design (lo-fi),4,n/a
+16,12,4. Create & evaluate hi-fi prototype,4,n/a
+17,1,Literature review,1,n/a
+18,17,“State of the art”,2,n/a
+19,17,Methodology,2,n/a
+20,1,Analysis,1,n/a
+21,1,Design,1,n/a
+22,21,Lo-fi prototype,2,n/a
+23,21,Hi-fi prototype,2,n/a
+24,1,Proof of concept,1,n/a
+25,1,Evaluation,1,n/a
+26,1,Critical Evaluation & Conclusions,1,n/a
+27,26,Critical Evaluation,2,n/a
+28,26,Conclusions and Future Work,2,n/a
+29,1,References,1,n/a
+30,29,TBC – use Harvard.,2,n/a
+31,1,Appendices,1,n/a
+32,25,Testing strategy,2,n/a
+33,25,Results from Survey,2,n/a
+34,25,Results from User Testing,2,n/a
+35,0,new section root,0,n/a
+36,35,New section edited,1,Jihun
+37,36,new sub section,2,jihun park
