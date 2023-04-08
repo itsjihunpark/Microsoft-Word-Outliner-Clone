@@ -3,46 +3,13 @@ Functional Test Plan Template
 - **Start date**: 01/20/2023  
 - **Due date**: not sure yet 
 - **Main Author:** @k2115030   
-- **Repository:**
-[Outliner in Personal Portfolio]
+- **Repository:** [Outliner in Personal Portfolio]
+
 
 # 1 Sub-Heading
 
-An example Markdown functional test plan template.Perhaps some explanatory text about the application could go here with links if required.
-[Info about Markdown](https://markdown.land/) 
-
-You can put your requirement breakdown in tables. Markdown tables are quite basic but by using `<br>` tags for new lines, extra rows with or without numbered lists, and `code` , *italics* or **bold** you can get a reasonable result. 
-
-The plan can then be version managed and incremental changes shown in gitlab commits. You can then develop the plan incrementally as you go and get full credit for it at the end of your development.  
-ps Outside of tables a *new-line* can be inserted without a `<br>` tag - by putting two spaces before a carriage return e.g. as for this line. 
-
-
 # 2 Requirements
-<b>Requirements overview:</b><br>
-Functional Requirements:<br>
-*<b>FR1(M)</b>-Structured data model capable of storing, retrieving data<br>
-*<b>FR2(S)</b>-Add a new Section to the Outline<br>
-*<b>FR3(S)</b> an existing Section<br>
-*<b>FR4(S)</b>-Delete an existing Section from the Outline<br>
-*<b>FR5(S)</b>-Mark a Section in the outline as completed<br>
-*<b>FR6(M)</b>-Add a subSection to an existing Section <br>
-*<b>FR7(S)</b>-Edit an existing subSection<br>
-*<b>FR8(S)</b>-Delete an existing subSection<br>
-*<b>FR9(S)</b>-Save an Outline to a file<br>
-*<b>FR10(S)</b>-Load an Outline from a file<br>
-*<b>FR11(C)</b>-Filter/Search Section<br>
-*<b>FR12(C)</b>-Add a tag to a Section<br>
-*<b>FR13(C)</b>-Edit tag(s) in a Section<br>
-*<b>FR14(C)</b>-Sort section<br>
-*<b>FR15(C)</b>-Order the child items of any item<br>
-*<b>FR16(C)</b>-Retrieve items from a web service/url and populate the outline with them<br>
-*<b>FR17(C)</b>-Simple formatting of text<br>
-<b>None functional Requirements</b>
-*<b>NFR1(M)</b>-A UML diagram<br>
-*<b>NFR2(C))</b>-Documentation of features, including functional testing plan<br>
-*<b>NFR3(C)</b>-Implement a graphical user interface, including design documentation<br>
-*<b>NFR4(C)</b>-Use appropriate OO design approaches<br>
-*<b>NFR5(M)</b>-Use appropriate development best practices, including GitLab<br>
+
 ## 2.1 Requirement(functional) 1
 
 | **FR1** |   **Structured data model capable of storing, retrieving data**    |
