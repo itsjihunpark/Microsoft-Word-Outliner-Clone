@@ -31,10 +31,10 @@ The below test plans are implemented in Test.java in my test package
 ||2. This Section Object is added to the ArrayList&lt;Section&gt; which is used to generate a string view|
 ||3. This string view is used to update the JTextArea component in my Graphical user interface|
 | **Tests**      |  Testing adding a new Section Object to the outline |
-||1. Test an operation is completed |
-||2. Test result in one case | 
-||3. Test result in another case | 
-||4. More tests for expected outcomes | 
+||1. Testing if a new section is instantiated and added to the Outline ArrayList&lt;Section&gt; and is reflected on the JTextArea on my Graphical interface |
+||    With this method in my Tests class `Tests.testAddNewSection()` | 
+||2. Test if my new Section Object was assigned a correct id attribute by its constructor| 
+||   With this method `Tests.testSectionConstructorIdAllocation()` | 
 | **Errors**      | Issues that may be encountered |
 ||1. Some development code might cause an error|
 ||2. Some assumption might be incorrect|
