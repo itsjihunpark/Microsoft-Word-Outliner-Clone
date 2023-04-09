@@ -61,10 +61,10 @@ Table 2.1 Requirement R1
 ||2. This Section Object is added to the ArrayList&lt;Section&gt; which is used to generate a string view|
 ||3. This string view is used to update the JTextArea component in my Graphical user interface|
 | **Tests**      |  Test to see if the sub section is corrected instantiated and is correctly associated with its parenting section |
-||1. Test to see if the sub section is corrected instantiated |
-||   With this method in my Tests class `Tests.testAddSubSection()` | 
+||1. Test to see if the sub section is correctly instantiated |
+||   With this test method `Tests.testAddSubSection()` | 
 | **Errors**      | Issues that was encountered |
-||1. When instantiated a Section Object with the text that includes a comma, it causes my CSV parser to instantiates an incorrect Section object|
+||1. When instantiated a new sub Section Object with the text that includes a comma, it causes my CSV parser to instantiates an incorrect Section object|
 | **Alternative Flows**      | In the case a comma is included as a text attribute when user inputs|
 ||1. All text inputs goes through the `stringObject.replace(",", ";")` which replaces all comma's in the text input with semi colon which prevents the above issues from arising|
 Table 2.2 Requirement R2
