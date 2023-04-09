@@ -37,10 +37,8 @@ The below test plans are implemented in Test.java in my test package
 ||   With this method `Tests.testSectionConstructorIdAllocation()` | 
 | **Errors**      | Issues that was encountered |
 ||1. When instantiated a Section Object with the text that includes a comma that causes my CSV parser instantiates an incorrect Section object|
-| **Alternative Flows**      | How exceptions/errors are handled or special cases |
-||1. A normal condition is not met what then?|
-||2. This is the first time the application has been run..|
-||3. More edge cases....|
+| **Alternative Flows**      | In the case a comma is included as a text attribute when user inputs|
+||1. All text inputs goes through the `stringObject.replace(",", ";")` which replaces all comma's in the text input with semi colon which prevents the above issues from arising|
 
 Table 2.1 Requirement R1
 
