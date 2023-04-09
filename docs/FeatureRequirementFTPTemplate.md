@@ -44,9 +44,9 @@ Table 2.1 Requirement R1
 
 ## 2.2 Requirement 2
 
-| **R2** |   **Requirement 2 Title**    |
+| **Requirement code: OR10** | 
 | ------ | ------------------------------------ | 
-| **Description**      | Describes the requirement in more detail  | 
+| **Description**      | Testing ability to add new subSection  | 
 | **Pre-condition**     | Requirements prior to entry   |      
 | **Post-condition**      | Promise to deliver upon exit   | 
 | **Design notes**     | Any notes on use |
