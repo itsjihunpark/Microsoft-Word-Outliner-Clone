@@ -36,7 +36,7 @@ The below test plans are implemented in Test.java in my test package
 ||2. Test if my new Section Object was assigned a correct id attribute by its constructor| 
 ||   With this method `Tests.testSectionConstructorIdAllocation()` | 
 | **Errors**      | Issues that was encountered |
-||1. When instantiated a Section Object with the text that includes a comma that causes my CSV parser instantiates an incorrect Section object|
+||1. When instantiated a Section Object with the text that includes a comma, it causes my CSV parser to instantiates an incorrect Section object|
 | **Alternative Flows**      | In the case a comma is included as a text attribute when user inputs|
 ||1. All text inputs goes through the `stringObject.replace(",", ";")` which replaces all comma's in the text input with semi colon which prevents the above issues from arising|
 
