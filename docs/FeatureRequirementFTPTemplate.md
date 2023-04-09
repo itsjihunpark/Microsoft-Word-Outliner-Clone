@@ -35,11 +35,8 @@ The below test plans are implemented in Test.java in my test package
 ||    With this method in my Tests class `Tests.testAddNewSection()` | 
 ||2. Test if my new Section Object was assigned a correct id attribute by its constructor| 
 ||   With this method `Tests.testSectionConstructorIdAllocation()` | 
-| **Errors**      | Issues that may be encountered |
-||1. Some development code might cause an error|
-||2. Some assumption might be incorrect|
-||3. Some operation might fail|
-||4. Some more tests... `testName and signature`|
+| **Errors**      | Issues that was encountered |
+||1. When instantiated a Section Object with the text that includes a comma that causes my CSV parser instantiates an incorrect Section object|
 | **Alternative Flows**      | How exceptions/errors are handled or special cases |
 ||1. A normal condition is not met what then?|
 ||2. This is the first time the application has been run..|
