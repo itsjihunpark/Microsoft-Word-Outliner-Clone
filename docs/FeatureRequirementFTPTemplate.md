@@ -12,7 +12,7 @@ The below test plans are implemented in Test.java in my test package
 
 # 2 Requirements
 
-## 2.1  
+## 2.1  Adding a new section and requirement OR01, OR03, OR04, OR06
 
 | **Requirement code: OR01, OR03, OR04, OR06** |       |
 | ------ | ------------------------------------ | 
