@@ -67,6 +67,7 @@ Table 2.1 Requirement R1
 ||1. When instantiated a new sub Section Object with the text that includes a comma, it causes my CSV parser to instantiates an incorrect Section object|
 | **Alternative Flows**      | In the case a comma is included as a text attribute when user inputs|
 ||1. All text inputs goes through the `stringObject.replace(",", ";")` which replaces all comma's in the text input with semi colon which prevents the above issues from arising|
+
 Table 2.2 Requirement R2
 
 
