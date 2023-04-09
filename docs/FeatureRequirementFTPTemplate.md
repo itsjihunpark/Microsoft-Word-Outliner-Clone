@@ -17,9 +17,9 @@ The below test plans are implemented in Test.java in my test package
 | **Requirement code: OR01, OR03, OR04, OR06** |       |
 | ------ | ------------------------------------ | 
 | **Description**      | OR01-Structured data model that is capable of storing, retrieving, OR03-Graphical interface for outliner, OR04-Appropriate OO design, OR06-adding a new section to the outline.  | 
-| **Pre-condition**     | Requirements prior to entry   |      
-| **Post-condition**      | Promise to deliver upon exit   | 
-| **Design notes**     | Any notes on use <br> Notes in cells can be put on separate lines using `<br>` or more rows eg... |
+| **Pre-condition**     | a CSV file, a working Section, Outliner, and DataAccess class|      
+| **Post-condition**      | A Section Object instantiated, Added to the Outliner ArrayList<Section> section attribute which will be reflected on the Outliner_view graphical user interface  | 
+| **Design notes**     | This functionality to add a new section also stores to persistent storage at the same time so the result of adding a new section should also reflect on the csv file |
 ||1. numbered or unnumbered list of notes |
 || 2. and another... code can be included `Some code or Classname`  | 
 || 3. more.... |
