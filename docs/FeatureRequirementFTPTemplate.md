@@ -7,15 +7,16 @@ Functional Test Plan Template
 [Outliner in Personal Portfolio]
 
 
-# 1 Sub-Heading
+# 1 Functional tests
+The below test plans are implemented in Test.java in my test package
 
 # 2 Requirements
 
-## 2.1 Requirement(functional) 1
+## 2.1  
 
-| **FR1** |   **Structured data model capable of storing, retrieving data**    |
+| **OR01, OR03, OR04, OR06** |       |
 | ------ | ------------------------------------ | 
-| **Description**      | Data Model consisting of Outliner, Section and user  | 
+| **Description**      | OR01-Structured data model that is capable of storing, retrieving, OR03-Graphical interface for outliner, OR04-Appropriate OO design, OR06-adding a new section to the outline.  | 
 | **Pre-condition**     | Requirements prior to entry   |      
 | **Post-condition**      | Promise to deliver upon exit   | 
 | **Design notes**     | Any notes on use <br> Notes in cells can be put on separate lines using `<br>` or more rows eg... |
