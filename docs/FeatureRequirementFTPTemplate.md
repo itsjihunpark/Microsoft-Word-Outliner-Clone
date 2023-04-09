@@ -42,7 +42,7 @@ The below test plans are implemented in Test.java in my test package
 
 Table 2.1 Requirement R1
 
-## 2.2 Requirement 2
+## 2.2 Adding new subSection OR10
 
 | **Requirement code: OR10** |       |
 | ------ | ------------------------------------ | 
