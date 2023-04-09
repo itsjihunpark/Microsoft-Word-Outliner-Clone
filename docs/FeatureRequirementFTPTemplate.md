@@ -14,7 +14,7 @@ The below test plans are implemented in Test.java in my test package
 
 ## 2.1  
 
-| **OR01, OR03, OR04, OR06** |       |
+| **Requirement code: OR01, OR03, OR04, OR06** |       |
 | ------ | ------------------------------------ | 
 | **Description**      | OR01-Structured data model that is capable of storing, retrieving, OR03-Graphical interface for outliner, OR04-Appropriate OO design, OR06-adding a new section to the outline.  | 
 | **Pre-condition**     | Requirements prior to entry   |      
