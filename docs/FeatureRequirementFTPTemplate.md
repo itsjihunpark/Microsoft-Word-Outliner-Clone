@@ -91,7 +91,7 @@ Table 2.2 Requirement R2
 ||1. Test to see if a section or subsection that is edited is updated in the ArrayList&lt;Section&gt;section |
 ||   With this test method `Tests.testEditSection()` | 
 | **Errors**      | Issues that was encountered |
-||1. When the text to update an existing section contains a comma, it causes my CSV file contain a section object with the wrong format which is not compatible with my CSV parser|
+||1. When the text to update an existing section contains a comma, it causes my CSV file to contain a section object with the wrong format which is not compatible with my CSV parser|
 | **Alternative Flows**      | In the case a comma is included as a text attribute when user inputs|
 ||1. All text inputs goes through the `stringObject.replace(",", ";")` which replaces all comma's in the text input with semi colon which prevents the above issues from arising|
 
