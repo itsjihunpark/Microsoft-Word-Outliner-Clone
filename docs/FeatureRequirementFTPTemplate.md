@@ -20,9 +20,7 @@ The below test plans are implemented in Test.java in my test package
 | **Pre-condition**     | a CSV file, a working Section, Outliner, and DataAccess class|      
 | **Post-condition**      | A Section Object instantiated, Added to the Outliner ArrayList<Section> section attribute which will be reflected on the Outliner_view graphical user interface  | 
 | **Design notes**     | This functionality to add a new section also stores to persistent storage at the same time so the result of adding a new section should also reflect on the csv file |
-||1. numbered or unnumbered list of notes |
-|| 2. and another... code can be included `Some code or Classname`  | 
-|| 3. more.... |
+|
 | **Parameters**      | If needed with code `method(int param1, Thing param2)` |    
 | **Step sequence**      |  Step-by-step breakdown to accomplish requirement |
 ||1. Perform an operation|
