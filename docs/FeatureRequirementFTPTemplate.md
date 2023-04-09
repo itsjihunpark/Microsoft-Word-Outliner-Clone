@@ -44,7 +44,7 @@ Table 2.1 Requirement R1
 
 ## 2.2 Requirement 2
 
-| **Requirement code: OR10** | 
+| **Requirement code: OR10** |       |
 | ------ | ------------------------------------ | 
 | **Description**      | Testing ability to add new subSection  | 
 | **Pre-condition**     | Requirements prior to entry   |      
