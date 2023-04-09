@@ -24,7 +24,7 @@ The below test plans are implemented in Test.java in my test package
 | **Step sequence**      |  |
 ||1. Instantiate a new Section object->`Section newSection = new Section(0,"New section Text")`|
 ||2. Call the Outliner Function to add new Section->`Outliner.addSection(newSection)` | 
-||3. Generate new string view with this new Section Object added to the ArrayList<Section> section| 
+||3. Generate new string view with this new Section Object added to the ArrayList&lt;Section&gt; section| 
 ||4. In then do this |
 | **Success**      | Criterion of success |
 ||1. This is the case|
