@@ -56,6 +56,7 @@ public class SectionPanel extends JPanel{
                     
                     do{
                         inputValue= JOptionPane.showInputDialog("Enter new section value"); 
+                        inputValue = inputValue.replace(",", ";");
                     }
                     while(inputValue.isEmpty());
 
@@ -76,6 +77,7 @@ public class SectionPanel extends JPanel{
                         System.out.println("user is creating a sub section of id: "+ clickedSectionId);
                         do{
                             inputValue= JOptionPane.showInputDialog("Enter new section value"); 
+                            inputValue = inputValue.replace(",", ";");
                         }
                         while(inputValue.isEmpty());
                         Outliner.addSection(new Section(clickedSectionId,inputValue));
@@ -94,6 +96,7 @@ public class SectionPanel extends JPanel{
                         do{
                             
                             inputValue= JOptionPane.showInputDialog("Update this text for this section",DataAccess.getSectionByIdFromOrderedList(clickedSectionId).getText().trim()); 
+                            inputValue = inputValue.replace(",", ";");
                         }
                         while(inputValue.isEmpty());
                         Outliner.editSection(clickedSectionId, inputValue);
@@ -103,6 +106,7 @@ public class SectionPanel extends JPanel{
                         System.out.println("User wants to assign a user");
                         do{
                             inputValue= JOptionPane.showInputDialog("Enter user name"); 
+                            inputValue = inputValue.replace(",", ";");
                         }
                         while(inputValue.isEmpty());
                         Outliner.assignUser(clickedSectionId, inputValue);
