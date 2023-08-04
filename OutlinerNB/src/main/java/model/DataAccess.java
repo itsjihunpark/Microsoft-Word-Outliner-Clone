@@ -23,7 +23,6 @@ public class DataAccess
 {
     private static ArrayList<Section> sectionInOrder = new ArrayList();//ordered for string view
     private static ArrayList<Section> sections = new ArrayList(); //ordered for CSV
-    public static final Comparator<Section> BY_ID = new DataAccess.ById();
     
     private static String fileName;
 
@@ -245,7 +244,7 @@ public class DataAccess
         {
             updatedAndReOrdered.add(s);
         }
-        Collections.sort(updatedAndReOrdered, BY_ID);
+        Collections.sort(updatedAndReOrdered, (s1, s2)-> s1.getId().compareTo(s2.getId()));
         String csv = "";
         for(Section s: updatedAndReOrdered)
         {
@@ -284,17 +283,5 @@ public class DataAccess
      */
     public static void setSections(ArrayList<Section> sections) {
         DataAccess.sections = sections;
-    }
-    /**
-     * anonymous inner class that implements comparator. Used for when ordering the outline in the order that the csv file will be updated by
-     */
-    private static class ById implements Comparator<Section> 
-    {
-        @Override
-        public int compare(Section s1, Section s2) {
-            return s1.getId().compareTo(s2.getId());
-        }   
-    }
-    
-    
+    } 
 }
