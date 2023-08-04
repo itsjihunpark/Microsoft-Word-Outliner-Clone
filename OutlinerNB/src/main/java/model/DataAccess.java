@@ -135,12 +135,7 @@ public class DataAccess
         {
             orderedById.add(s);
         }
-        Collections.sort(orderedById, new Comparator<Section>(){
-            
-            public int compare(Section s1, Section s2) {
-                return s1.getId().compareTo(s2.getId());
-            }  
-        });
+        Collections.sort(orderedById, (s1, s2)->s1.getId().compareTo(s2.getId()));
         String csv = "";
         for(Section s: orderedById)
         {
