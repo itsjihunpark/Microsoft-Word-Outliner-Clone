@@ -15,7 +15,7 @@
 15,12,3. Evaluate and iterate design (lo-fi),4,n/a
 16,12,4. Create & evaluate hi-fi prototype,4,n/a
 17,1,Literature review,1,n/a
-18,17,“State of the art”,2,n/a
+18,17,“State of the art�?,2,n/a
 19,17,Methodology,2,n/a
 20,1,Analysis,1,n/a
 21,1,Design,1,n/a
@@ -35,3 +35,4 @@
 35,0,new section root,0,n/a
 36,35,New section edited,1,Jihun
 37,36,new sub section edited,2,jihun park
+38,37,New subsection,3,n/a
