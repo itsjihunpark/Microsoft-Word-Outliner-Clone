@@ -23,7 +23,7 @@ public class DataAccess
 {
     private static ArrayList<Section> sectionInOrder = new ArrayList();//ordered for string view
     private static ArrayList<Section> sections = new ArrayList(); //ordered for CSV
-    
+    private static Comparator<Section> compSection = (s1, s2)-> s1.getId().compareTo(s2.getId());
     private static String fileName;
 
     /**
@@ -134,7 +134,7 @@ public class DataAccess
         {
             orderedById.add(s);
         }
-        Collections.sort(orderedById, (s1, s2)->s1.getId().compareTo(s2.getId()));
+        Collections.sort(orderedById, compSection);
         String csv = "";
         for(Section s: orderedById)
         {
@@ -244,7 +244,7 @@ public class DataAccess
         {
             updatedAndReOrdered.add(s);
         }
-        Collections.sort(updatedAndReOrdered, (s1, s2)-> s1.getId().compareTo(s2.getId()));
+        Collections.sort(updatedAndReOrdered, compSection);
         String csv = "";
         for(Section s: updatedAndReOrdered)
         {
