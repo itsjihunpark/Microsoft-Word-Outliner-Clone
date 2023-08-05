@@ -134,7 +134,7 @@ public class DataAccess
         {
             orderedById.add(s);
         }
-        Collections.sort(orderedById, compSection);
+        Collections.sort(orderedById);
         String csv = "";
         for(Section s: orderedById)
         {

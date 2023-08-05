@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author jihun
  */
-public class Section 
+public class Section implements Comparable<Section>
 {
     //Class attributes
     private String user;
@@ -189,6 +189,16 @@ public class Section
      */
     public void setLevel(Integer level) {
         this.level = level;
+    }
+
+    public int compareTo(Section o) {
+       if (this.id > o.id)
+       {
+           return 1;
+       }
+       else{
+           return -1;
+       }
     }
     
 }
